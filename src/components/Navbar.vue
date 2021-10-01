@@ -1,5 +1,5 @@
 <template>
-        <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
+         <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
             <nav id="primary-menu" class="navbar navbar-fixed-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -10,29 +10,51 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-                        <a class="logo" href="index-2.html">
-					<img class="logo-light" src="../../public/assets/images/logo/logo-light.png" alt="Land Logo">
-					<img class="logo-dark" src="../../public/assets/images/logo/logo-dark.png" alt="Land Logo">
-				</a>
+                        <router-link to="/" class="logo" >
+					<img class="logo-light" src="assets/images/logo/logo-light.png" alt="Land Logo">
+					<img class="logo-dark" src="assets/images/logo/logo-dark.png" alt="Land Logo">
+                        </router-link>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
                         <ul class="nav navbar-nav nav-pos-center navbar-left">
                             <!-- Home Menu -->
-                            <li class="has-dropdown active">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">home</a>
+                            <li  class="active">
+                                <!-- <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">home</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="index-2.html">home search</a></li>
                                     <li><a href="home-map.html">home map</a></li>
                                     <li><a href="home-property.html">home property</a></li>
                                     <li><a href="home-splash.html">home splash</a></li>
-                                </ul>
+                                </ul> -->
+                                <router-link to="/" style="font-size:1.2rem">Home</router-link>
                             </li>
+                            <li class="active">
+                                <router-link to="/Agents" style="font-size:1.2rem">Agents</router-link>
+                            </li>
+                            <li class="active">
+                                <router-link to="/Agencies" style="font-size:1.2rem">Agencies</router-link>
+                            </li>
+                            <li class="active">
+                                <router-link to="/About" style="font-size:1.2rem">About</router-link>
+                            </li>
+                            <li class="active">
+                                <router-link to="/Contact" style="font-size:1.2rem">Contact</router-link>
+                            </li>
+                            <!-- <li class="active">
+                                <router-link to="/Agencies" style="font-size:1.5rem">My Profile</router-link>
+                            </li> -->
+                            <!-- <li class="active">
+                                <router-link to="/Agent/anks" style="font-size:1.5rem">Single Agent</router-link>
+                            </li> -->
+                            <!-- <li class="active">
+                                <router-link to="/Agency/anks" style="font-size:1.5rem">Single Agency</router-link>
+                            </li> -->
                             <!-- li end -->
 
-                            <!-- Pages Menu-->
-                            <li class="has-dropdown">
+                            <!-- Pages Menu -->
+                            <!-- <li class="has-dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Pages</a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
@@ -79,24 +101,24 @@
                                     <li><a href="page-faq.html">page FAQ</a></li>
                                     <li><a href="page-404.html">page 404</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- li end -->
 
                             <!-- Profile Menu-->
                             <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Profile</a>
+                                <a href="#" style="font-size:1.2rem" data-toggle="dropdown" class="dropdown-toggle menu-item">My Profile</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="user-profile.html">user profile</a></li>
-                                    <li><a href="social-profile.html">social profile</a></li>
-                                    <li><a href="my-properties.html">my properties</a></li>
-                                    <li><a href="favourite-properties.html">favourite properties</a></li>
-                                    <li><a href="add-property.html">add property</a></li>
+                                    <li><router-link to="/UserProfile">user profile</router-link></li>
+                                    <li><router-link to="/SocialProfile">social profile</router-link></li>
+                                    <li><router-link to="/FavouriteProperties">favourite properties</router-link></li>
+                                    <li><router-link to="/MyProperties">my properties</router-link></li>
+                                    <li><router-link to="/AddProperty">add property</router-link></li>
                                 </ul>
                             </li>
                             <!-- li end -->
 
                             <!-- Properties Menu-->
-                            <li class="has-dropdown">
+                          <!--   <li class="has-dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Properties</a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
@@ -133,10 +155,10 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- li end -->
 
-                            <li><a href="page-contact.html">contact</a></li>
+                            <!-- <li><a href="page-contact.html">contact</a></li> -->
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
@@ -173,10 +195,10 @@
                                                                 <!-- .form-group end -->
                                                                 <div class="input-checkbox">
                                                                     <label class="label-checkbox">
-                                <span>Remember Me</span>
-                                <input type="checkbox">
-                                <span class="check-indicator"></span>
-                            </label>
+                                                                    <span>Remember Me</span>
+                                                                    <input type="checkbox">
+                                                                    <span class="check-indicator"></span>
+                                                                </label>
                                                                 </div>
                                                                 <input type="submit" class="btn btn--primary btn--block" value="Sign In">
                                                                 <a href="#" class="forget-password">Forget your password?</a>
@@ -186,29 +208,42 @@
                                                         <!-- .signup-form end -->
                                                     </div>
                                                     <div class="tab-pane" id="signup">
-                                                        <form class="mb-0">
+                                                        <form class="mb-0" @submit.prevent="handleRegister">
                                                             <a href="#" class="btn btn--facebook btn--block"><i class="fa fa-facebook-square"></i>Register with Facebook</a>
                                                             <div class="or-text">
                                                                 <span>or</span>
                                                             </div>
+                                                            {{UserDetails}}
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control" name="full-name" id="full-name" placeholder="Full Name">
+                                                                <select class="form-control" name="register-as" id="register-as" 
+                                                                           v-model="UserDetails.RegisterAs" >
+                                                                            <option value="">Register As</option>
+                                                                            <option >User</option>
+                                                                            <option >Agent</option>
+                                                                            <option >Agency</option>
+                                                                </select>
                                                             </div>
                                                             <!-- .form-group end -->
                                                             <div class="form-group">
-                                                                <input type="email" class="form-control" name="register-email" id="register-email" placeholder="Email Address">
+                                                                <input type="text" class="form-control" name="full-name" id="full-name" 
+                                                                placeholder="full name" v-model="UserDetails.FirstName">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="email" class="form-control" name="register-email" id="register-email" 
+                                                                placeholder="Email Address" v-model="UserDetails.Email">
                                                             </div>
                                                             <!-- .form-group end -->
                                                             <div class="form-group">
-                                                                <input type="password" class="form-control" name="register-password" id="register-password" placeholder="Password">
+                                                                <input type="password" class="form-control" name="register-password" id="register-password" 
+                                                                placeholder="Password" v-model="UserDetails.Password">
                                                             </div>
                                                             <!-- .form-group end -->
                                                             <div class="input-checkbox">
                                                                 <label class="label-checkbox">
-                                <span>I agree with all <a href="#">Terms & Conditions</a></span>
-                                <input type="checkbox">
-                                <span class="check-indicator"></span>
-                            </label>
+                                                                <span>I agree with all <a href="#">Terms & Conditions</a></span>
+                                                                <input type="checkbox">
+                                                                <span class="check-indicator"></span>
+                                                            </label>
                                                             </div>
                                                             <input type="submit" class="btn btn--primary btn--block" value="Register">
                                                         </form>
@@ -227,7 +262,8 @@
                         </div>
                         <!-- Module Consultation  -->
                         <div class="module module-property pull-left">
-                            <a href="add-property.html" target="_blank" class="btn"><i class="fa fa-plus"></i> add property</a>
+                            <!-- <a href="add-property.html" > add property</a> -->
+                            <router-link to="/AddProperty" class="btn"><i class="fa fa-plus"></i>add property</router-link>
                         </div>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -241,12 +277,28 @@
 <script>
 
 export default {
-
+    data() {
+        return {
+            UserDetails : {
+                RegisterAs : '',
+                FirstName : '',
+                Email : '',
+                Password : '',
+            }
+        }
+    },
+    methods :{
+        handleRegister(){
+            console.log(this.UserDetails);
+        }
+    }
 }
 </script>
     
 <style>
-.bmyGb{
+/* .bmyGb{
     background-color: black ;
-}
+} */
+
+
 </style>

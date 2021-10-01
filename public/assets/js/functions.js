@@ -16,7 +16,15 @@
 	13. SHOW OPTIONS
 
 */
-$(document).ready(function($) {
+// $('#app').change(function(){
+//     console.log('hello');
+// })
+
+// $(document).bind('DOMSubtreeModified' , () => {
+//     console.log('hello')}
+// )
+
+(function() {
     "use strict";
 
     /* ------------------  Background INSERT ------------------ */
@@ -277,4 +285,4 @@ $(document).ready(function($) {
         event.preventDefault();
     });
 
-});
+}($));
