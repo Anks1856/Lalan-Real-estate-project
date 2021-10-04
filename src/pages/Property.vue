@@ -9,11 +9,11 @@
                             <div class="property--info clearfix">
                                 <div class="pull-left">
                                     <h5 class="property--title">  {{property.name}}</h5>
-                                    <p class="property--location"><i class="fa fa-map-marker"></i>127 Kent Street, Sydney, NSW 2000</p>
+                                    <p class="property--location"><i class="fa fa-map-marker"></i>{{property.location.address}}</p>
                                 </div>
                                 <div class="pull-right">
-                                    <div class="property--status mb-20">For Rent</div>
-                                    <p class="property--price text-theme">$1,800<span>month</span></p>
+                                    <div class="property--status mb-20">For {{property.description.status}}</div>
+                                    <p class="property--price text-theme">${{property.price}} <span></span></p>
                                 </div>
                             </div>
                             <!-- .property-info end -->
@@ -21,7 +21,7 @@
                                 <div class="pull-left">
                                     <ul class="list-unstyled list-inline mb-0">
                                         <li>
-                                            Property ID:<span class="value">5331</span>
+                                            Property ID:<span class="value"> {{property.porpertyID}}  </span>
                                         </li>
                                         <li>
                                             Add to favorites:<span class="value"> <i class="fa fa-heart-o"></i></span>
@@ -51,21 +51,21 @@
                 <!-- Slide #1 -->
                 <div class="slide--item bg-overlay bg-overlay-gradient">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #2 -->
                 <div class="slide--item bg-overlay bg-overlay-gradient">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #3 -->
                 <div class="slide--item bg-overlay bg-overlay-gradient">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
@@ -91,11 +91,11 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/1.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/1.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Area:</h5>
-                                            <p>1270 sq ft</p>
+                                            <p> {{property.description.area}} sq ft</p>
                                         </div>
                                     </div>
                                 </div>
@@ -104,11 +104,11 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/2.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/2.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Beds:</h5>
-                                            <p>4 Bedrooms</p>
+                                            <p> {{property.description.bedrooms}} Bedrooms</p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,11 +117,11 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/3.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/3.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Baths:</h5>
-                                            <p>2 Bathrooms</p>
+                                            <p> {{property.description.bathrooms}} Bathrooms</p>
                                         </div>
                                     </div>
                                 </div>
@@ -130,11 +130,11 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/4.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/4.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Rooms:</h5>
-                                            <p>6 Rooms</p>
+                                            <p> {{property.description.rooms}} Rooms</p>
                                         </div>
                                     </div>
                                 </div>
@@ -143,11 +143,11 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/5.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/5.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Floors:</h5>
-                                            <p>3 Floors</p>
+                                            <p> {{property.description.floors}} Floors</p>
                                         </div>
                                     </div>
                                 </div>
@@ -156,19 +156,19 @@
                                 <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-panel">
                                         <div class="feature--img">
-                                            <img src="assets/images/property-single/features/6.png" alt="icon">
+                                            <img src="/assets/images/property-single/features/6.png" alt="icon">
                                         </div>
                                         <div class="feature--content">
                                             <h5>Garage:</h5>
-                                            <p>2 Garages</p>
+                                            <p> {{property.description.garage}} Garages</p>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- feature-panel end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="property--details">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                        <p>Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.</p>
+                                        <p> {{property.description.detailSummary1}} </p>
+                                        <p> {{property.description.detailSummary2}} </p>
                                     </div>
                                     <!-- .property-details end -->
                                 </div>
@@ -187,88 +187,88 @@
                                     </div>
                                 </div>
                                 <!-- feature-item #1 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div v-for="feature in property.features" :key="feature" class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
-                                        <p>Center Cooling</p>
+                                        <p> {{feature}} </p>
                                     </div>
                                 </div>
                                 <!-- feature-item end -->
                                 <!-- feature-item #2 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Balcony</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #3 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Pet Friendly</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #4 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Fire Alarm</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #5 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Modern Kitchen</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #6 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Storage</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #7 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Heating</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #8 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Pool</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #9 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Laundry</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #10 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Gym</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #11 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Elevator</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                                 <!-- feature-item #12 -->
-                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                <!-- <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div class="feature-item">
                                         <p>Dish Washer</p>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- feature-item end -->
                             </div>
                             <!-- .row end -->
@@ -285,11 +285,12 @@
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <ul class="list-unstyled mb-20">
-                                        <li><span>Address:</span>1220 Petersham Town</li>
-                                        <li><span>City:</span>Sydney</li>
-                                        <li><span>Country:</span>Australia</li>
-                                        <li><span>State:</span>Newcastle</li>
-                                        <li><span>Zip/Postal code:</span>54330</li>
+                                        <li><span>Address:</span> {{property.location.address}} </li>
+                                        <li><span>City:</span> {{property.location.city}} </li>
+                                        <li><span>Country:</span> {{property.location.country}} </li>
+                                        <li><span>State:</span> {{property.location.state}} </li>
+                                        <li><span>Zip/Postal code:</span>  
+                                        {{property.location.zipcode}} </li>
                                     </ul>
                                 </div>
                                 <!-- .col-md-12 end -->
@@ -313,30 +314,32 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="accordion accordion-1" id="accordion01">
                                         <!-- Panel 01 -->
-                                        <div class="panel">
+                                        <div v-for="plan in property.floorPlans" :key="plan.floorNo" class="panel">
                                             <div class="panel--heading clearfix">
                                                 <div class="pull-left">
-                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-1">First Floor</a>
+                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion01"
+                                                     :href=" '#' + plan.floorId"> {{plan.floorNo}} </a>
                                                 </div>
                                                 <div class="pull-right">
                                                     <ul class="list-unstyled list-inline mb-0">
-                                                        <li><span>Size:</span>635 sq ft</li>
-                                                        <li><span>Rooms:</span>3</li>
-                                                        <li><span>Baths:</span>1</li>
+                                                        <li><span>Size:</span> {{plan.size}} sq ft</li>
+                                                        <li><span>Rooms:</span> {{plan.rooms}} </li>
+                                                        <li><span>Baths:</span> {{plan.baths}} </li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div id="collapse01-1" class="panel--body panel-collapse collapse in">
+                                            <div :id="plan.floorId" class="panel--body panel-collapse collapse in">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat.</p>
-                                                <img src="assets/images/property-single/1.png" alt="img" class="img-responsive">
+                                                <img :src="plan.planImage" alt="img" class="img-responsive">
                                             </div>
                                         </div>
                                         <!-- .panel end -->
                                         <!-- Panel 02 -->
-                                        <div class="panel">
+                                        <!-- <div class="panel">
                                             <div class="panel--heading clearfix">
                                                 <div class="pull-left">
-                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-2">Second Floor</a>
+                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion01" 
+                                                    href="#collapse01-2">Second Floor</a>
                                                 </div>
                                                 <div class="pull-right">
                                                     <ul class="list-unstyled list-inline mb-0">
@@ -350,7 +353,7 @@
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat.</p>
                                                 <img src="assets/images/property-single/1.png" alt="img" class="img-responsive">
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- .panel end -->
                                     </div>
                                     <!-- End .Accordion-->
@@ -372,12 +375,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="video--content text-center">
                                         <div class="bg-section">
-                                            <img src="assets/images/video/1.jpg" alt="Background" />
+                                            <img src="/assets/images/video/1.jpg" alt="Background" />
                                         </div>
                                         <div class="video--button">
                                             <div class="video-overlay">
                                                 <div class="pos-vertical-center">
-                                                    <a class="popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                                                    <a class="popup-video" :href="property.media.videoUrl">
                                             <i class="fa fa-youtube-play"></i>  
                                         </a>
                                                 </div>
@@ -397,17 +400,18 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="heading">
-                                        <h2 class="heading--title">3 Reviews</h2>
+                                        <h2 class="heading--title"> {{reviews.length}} Reviews</h2>
                                     </div>
                                 </div>
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <ul class="property-review">
-                                        <li class="review-comment">
-                                            <div class="avatar">R</div>
+                                       
+                                        <li v-for="review in reviews" :key="review.userName" class="review-comment">
+                                            <div class="avatar"> {{review.userAvatar}} </div>
                                             <div class="comment">
-                                                <h6>Ryan Printz</h6>
-                                                <div class="date">Feb 12, 2018</div>
+                                                <h6> {{review.userName}} </h6>
+                                                <div class="date"> {{review.dateOfcreation}} </div>
                                                 <div class="property-rating">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -415,11 +419,11 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star-o"></i>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
+                                                <p> {{review.message}} </p>
                                             </div>
                                         </li>
                                         <!-- comment end -->
-                                        <li class="review-comment">
+                                        <!-- <li class="review-comment">
                                             <div class="avatar">S</div>
                                             <div class="comment">
                                                 <h6>Steve Martin</h6>
@@ -433,9 +437,9 @@
                                                 </div>
                                                 <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
                                             </div>
-                                        </li>
+                                        </li> -->
                                         <!-- comment end -->
-                                        <li class="review-comment">
+                                        <!-- <li class="review-comment">
                                             <div class="avatar">N</div>
                                             <div class="comment">
                                                 <h6>Nicole Smith</h6>
@@ -449,7 +453,7 @@
                                                 </div>
                                                 <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
                                             </div>
-                                        </li>
+                                        </li> -->
                                         <!-- comment end -->
                                     </ul>
                                     <!-- .comments-list end -->
@@ -530,7 +534,7 @@
                             <div class="widget--content">
                                 <a href="#">
                                     <div class="agent--img">
-                                        <img src="assets/images/agents/grid/7.jpg" alt="agent" class="img-responsive">
+                                        <img src="/assets/images/agents/grid/7.jpg" alt="agent" class="img-responsive">
                                     </div>
                                     <div class="agent--info">
                                         <h5 class="agent--title">Matt Peters</h5>
@@ -601,7 +605,7 @@
                                     <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <img src="assets/images/properties/13.jpg" alt="property image" class="img-responsive">
+                                            <img src="/assets/images/properties/13.jpg" alt="property image" class="img-responsive">
                                             <span class="property--status">For Rent</span>
                                         </div>
                                         <div class="property--content">
@@ -617,7 +621,7 @@
                                     <!-- .property-item #2 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
+                                            <img src="/assets/images/properties/2.jpg" alt="property image" class="img-responsive">
                                             <span class="property--status">For Rent</span>
                                         </div>
                                         <div class="property--content">
@@ -633,7 +637,7 @@
                                     <!-- .property-item #3 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
+                                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
                                             <span class="property--status">For Sale</span>
                                         </div>
                                         <div class="property--content">
@@ -716,7 +720,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Sale</span>
 </a>
                                 </div>
@@ -743,7 +747,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/11.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/11.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Sale</span>
 							</a>
                                 </div>
@@ -770,7 +774,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/5.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/5.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Rent</span>
 							</a>
                                 </div>
@@ -797,7 +801,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/4.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/4.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Sale</span>
 							</a>
                                 </div>
@@ -824,7 +828,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/2.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Rent</span>
 </a>
                                 </div>
@@ -851,7 +855,7 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
+                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
                             <span class="property--status">For Sale</span>
 </a>
                                 </div>
@@ -888,7 +892,7 @@
         <!-- cta #1
 ============================================= -->
         <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="assets/images/cta/bg-1.jpg" alt="Background"></div>
+            <div class="bg-section"><img src="/assets/images/cta/bg-1.jpg" alt="Background"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
@@ -914,20 +918,42 @@ export default {
                 porpertyID : 15433,
                 agentId : 54686,
                 name : "1220 Petersham Town" ,
-                price : 70000,
+                price : 170000,
                 isFeatured : true ,
                 description : {
-                    destails : "lorem50",
+                    detailSummary1 : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.",
+                    detailSummary2 : "Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.",
                     type : "house",
                     status : "Sale",
+                    rooms : 6,
                     bedrooms : 3 ,
                     bathrooms : 4,
-                    floor : 2,
+                    floors : 2,
                     garage: 1,
                     area : 1250 ,
                     size : 564
                 },
-                features : ["Gym" , "Pool" , "Balcony"],
+                floorPlans : [
+                    {
+                        floorId : "floor1",
+                        floorNo : "Frist Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    },
+                    {
+                        floorId : "floor2",
+                        floorNo : "Second Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    }
+                ],
+                features : ["Center Cooling","Fire Alarm" ,"Pet Friendly","Gym" , "Pool" , "Balcony" , "Modern Kitchen" , "Storage" , "Heating"  , "Laundry" , "Elevator" , "Dish Washer"],
                 location : {
                     address : "Ahmedabad , India 380009",
                     country : "India",
@@ -938,9 +964,27 @@ export default {
                 },
                 media : {
                     photos : ["/assets/images/properties/1.jpg"],
-                    videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                    videoUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
                 }
-            }
+            },
+         reviews : [
+             {
+                porpertyID : 15433 ,
+                userAvatar : "R",
+                userName : "Steve Martin",
+                dateOfcreation : new Date().toLocaleString(),
+                message : "Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud",
+                rating : 4.5,
+             } , 
+             {
+                porpertyID : 15433 ,
+                userAvatar : "J",
+                userName : "John Martin",
+                dateOfcreation : new Date().toLocaleString(),
+                message : "Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud",
+                rating : 4.5,
+             }  
+         ]
      }
  }
 }

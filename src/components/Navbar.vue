@@ -31,11 +31,15 @@
                                 <router-link to="/" style="font-size:1.2rem">Home</router-link>
                             </li>
                             <li class="active">
+                                <router-link to="/properties" style="font-size:1.2rem">Properties</router-link>
+                            </li>
+                            <li class="active">
                                 <router-link to="/Agents" style="font-size:1.2rem">Agents</router-link>
                             </li>
                             <li class="active">
                                 <router-link to="/Agencies" style="font-size:1.2rem">Agencies</router-link>
                             </li>
+                            
                             <li class="active">
                                 <router-link to="/About" style="font-size:1.2rem">About</router-link>
                             </li>

@@ -23,7 +23,7 @@ const router = new VueRouter({
         {name : 'Agent' , path:'/Agent/:name' , meta:{title : 'Agent - '} , component : Agent },
         {name : 'Agencies' , path:'/Agencies' , meta:{title : 'Agencies - '} , component : Agencies },
         {name : 'Properties' , path:'/Properties' , meta:{title : 'Properties'} , component : Properties },
-        {name : 'Property' , path:'/Property' , meta:{title : 'Property'} , component : Property },
+        {name : 'Property' , path:'/Property/:propertyId' , meta:{title : 'Property'} , component : Property },
         {name : 'Agency' , path:'/Agency/:name' , meta:{title : 'Agency - '} , component : Agency },
         {name : 'About' , path:'/About' , meta:{title : 'About Lalan'} , component : About },
         {name : 'Contact' , path:'/Contact' , meta:{title : 'Contact Lalan'} , component : Contact },
