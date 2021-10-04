@@ -37,31 +37,34 @@
 ============================================= -->
 <section id="agent-profile" class="agent-profile bg-white">
     <div class="container">
+        {{user}}
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5">
                 <div class="agent--profile-img">
-                    <img src="/assets/images/agents/single/1.jpg" alt="agent" />
+                    <img :src="user.userProfilePic" alt="agent" />
                 </div>
             </div>
             <!-- .col-md-5 end -->
             <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
                 <div class="agent--profile-content">
                     <div class="agent--info">
-                        <h5 class="agent--title">Steve Martin</h5>
+                        <h5 class="agent--title"> {{user.personalDetails.firstName}} {{user.personalDetails.lastName}} </h5>
                         <p class="agent--position">Buying Agent</p>
                     </div>
                     <!-- .agent-info end -->
                     <div class="agent--profile-details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit.</p>
+                        <p> {{user.personalDetails.aboutSummary}} </p>
                     </div>
                     <!-- .agent-profile-details end -->
                     <div class="agent--profile-contact">
                         <ul class="list-unstyled mb-20 clearfix">
-                            <li><span>Phone:</span>(950) 491-570-180</li>
-                            <li><span>Email:</span><a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="592a2c2929362b2d193c21383429353c773a3634">[email&#160;protected]</a></li>
-                            <li><span>Mobile:</span>(+20) 220-145-6330</li>
-                            <li><span>Website:</span>modernhouse.com</li>
-                            <li><span>Fax:</span>(+44) 161-430-1620</li>
+                            <li><span>Phone:</span> {{user.personalDetails.phone}} </li>
+                            <li><span>Email:</span> {{user.personalDetails.email}}
+                            <!-- <a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="592a2c2929362b2d193c21383429353c773a3634">[email&#160;protected]</a> -->
+                            </li>
+                            <li><span>Mobile:</span> {{user.personalDetails.mobile}} </li>
+                            <li><span>Website:</span>{{user.personalDetails.website}}</li>
+                            <li><span>Fax:</span>{{user.personalDetails.fax}}</li>
                         </ul>
                     </div>
                     <!-- .agent-profile-contact end -->
@@ -363,7 +366,29 @@
 
 <script>
 export default {
+    data() {
+        return {
+            user : {
+                userProfilePic : "/assets/images/agents/single/1.jpg" ,  //image object or name
+                isAgent : true ,
+                agentId : 125125,
+                personalDetails : {
+                    firstName : "Steve",
+                    lastName : "Martin",
+                    // fullname , agent type are derived property
+                    email : "steve.martin@gmail.com",
+                    phone : '(950) 491-570-180',
+                    mobile : '(+20) 220-145-6330',
+                    website : 'modernhouse.com',
+                    fax : '(+44) 161-430-1620',
+                    aboutSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit"
+                },
+                myProperties : [12003] , // if isAgent = true
 
+            }
+        }
+    },
+    //need to find agent wich name is in URL 
 }
 </script>
 

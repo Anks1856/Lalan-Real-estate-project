@@ -29,7 +29,7 @@
         </section>
         <!-- #page-title end -->
 
-
+    {{user}}
         <!-- agency-profile 
 ============================================= -->
         <section id="agency-profile" class="agency-profile bg-white pb-70">
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-md-5">
                         <div class="agency--profile-img">
-                            <img src="/assets/images/agency/2.jpg" alt="agency" />
+                            <img :src="user.userProfilePic" alt="agency" />
                         </div>
                     </div>
                     <!-- .col-md-5 end -->
@@ -45,7 +45,7 @@
                         <div class="agency--profile-content">
 
                             <div class="agency--info">
-                                <h5 class="agency--title">Modern House</h5>
+                                <h5 class="agency--title"> {{user.personalDetails.firstName}} </h5>
                                 <p class="agency--location"><i class="fa fa-map-marker"></i>153 Sandra Cir, Westfield, NJ 07090</p>
                             </div>
                             <!-- .agency-info end -->
@@ -469,6 +469,34 @@
 
 <script>
 export default {
+    data() {
+        return {
+            user : {
+                userId : 1542,
+                userProfilePic : "/assets/images/agency/2.jpg" , 
+                isAgent : true , //image object or name
+                // agentId : 125125,
+
+                isAgency : true ,
+                // agencyId : 124578 ,
+                isUnderAgency : false, // if not agency then check
+                personalDetails : {
+                    firstName : "Modern House",
+                    lastName : "",
+                    address : "153 Sandra Cir, Westfield, NJ 07090",
+                    // fullname , agent type are derived property
+                    email : "steve.martin@gmail.com",
+                    phone : '(950) 491-570-180',
+                    mobile : '(+20) 220-145-6330',
+                    website : 'modernhouse.com',
+                    fax : '(+44) 161-430-1620',
+                    aboutSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magrem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit"
+                },
+                hasAgents : [150150 , 120120] , 
+                properties : [12003] , // combined properties of all agents
+                },
+        }
+    }
 
 }
 </script>

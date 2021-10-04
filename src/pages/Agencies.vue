@@ -36,19 +36,25 @@
             <div class="container">
                 <div class="row mb-50">
                     <div class="col-xs-12 col-sm-12 col-md-12">
+                        <!-- {{users}} -->
                         <!-- agency item #1 -->
-                        <div class="agency-item">
+                        <div v-for="user in users" :key="(user.userId).toString()" class="agency-item">
                             <div class="agency--img">
-                                <a href="agency-profile.html">
-                        <img src="assets/images/agency/1.png" alt="agency" class="img-responsive">
-                        </a>
+                                <router-link :to="'agency/'+ user.userId" >
+                                <img :src="user.userProfilePic" alt="agency" class="img-responsive">
+                                </router-link>
                             </div>
+                             <!-- <div class="agency--img">
+                                <a href="agency-profile.html">
+                                <img src="assets/images/agency/2.png" alt="agency" class="img-responsive">
+                                </a>
+                            </div> -->
                             <!-- .agency-img end -->
                             <div class="agency--content">
                                 <div class="clearfix mb-30">
                                     <div class="pull-left">
-                                        <h5 class="agency--title"><a href="agency-profile.html">Modern House</a></h5>
-                                        <span class="agency--location"><i class="fa fa-map-marker"></i>153 Sandra Cir, Westfield, NJ 07090</span>
+                                        <h5 class="agency--title"><router-link :to="'agency/'+ user.userId"> {{user.personalDetails.firstName}} </router-link></h5>
+                                        <span class="agency--location"><i class="fa fa-map-marker"></i> {{user.personalDetails.address}} </span>
                                     </div>
                                     <div class="pull-right">
                                         <div class="agency--social-links">
@@ -62,14 +68,14 @@
                                     </div>
                                 </div>
                                 <div class="agency--details">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    <p> {{user.personalDetails.aboutSummary}} </p>
                                 </div>
                                 <!-- .agency-details end -->
                                 <div class="agency--contact">
                                     <ul class="list-unstyled mb-0 clearfix">
-                                        <li><i class="fa fa-phone"></i>(950) 491-570-180</li>
-                                        <li><i class="fa fa-envelope-o"></i><a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90fdfff4f5e2fef8ffe5e3f5d0fcf1fef4bef3fffd">[email&#160;protected]</a></li>
-                                        <li><i class="fa fa-laptop"></i>modernhouse.com</li>
+                                        <li><i class="fa fa-phone"></i>{{user.personalDetails.phone}} </li>
+                                        <li><i class="fa fa-envelope-o"></i>{{user.personalDetails.email}}</li>
+                                        <li><i class="fa fa-laptop"></i>{{user.personalDetails.website}}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -78,126 +84,15 @@
                         <!-- .agency-item end -->
 
                         <!-- agency item #2 -->
-                        <div class="agency-item">
-                            <div class="agency--img">
-                                <a href="agency-profile.html">
-                        <img src="assets/images/agency/2.png" alt="agency" class="img-responsive">
-						</a>
-                            </div>
-                            <!-- .agency-img end -->
-                            <div class="agency--content">
-                                <div class="clearfix mb-30">
-                                    <div class="pull-left">
-                                        <h5 class="agency--title"><a href="agency-profile.html">Brokerage Group</a></h5>
-                                        <span class="agency--location"><i class="fa fa-map-marker"></i>6524 Vista Del Mar, Playa, CA 90293</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <div class="agency--social-links">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                                        </div>
-                                        <span class="Properties--number">10 Property</span>
-                                    </div>
-                                </div>
-                                <div class="agency--details">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                                </div>
-                                <!-- .agency-details end -->
-                                <div class="agency--contact">
-                                    <ul class="list-unstyled mb-0 clearfix">
-                                        <li><i class="fa fa-phone"></i>(86) 521-654-002</li>
-                                        <li><i class="fa fa-envelope-o"></i><a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98faeaf7f3fdeaf9fffdffeaf7ede8d8f4f9f6fcb6fbf7f5">[email&#160;protected]</a></li>
-                                        <li><i class="fa fa-laptop"></i>modernhouse.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- .agency-content end -->
-                        </div>
+                        
                         <!-- .agency-item end -->
 
                         <!-- agency item #3 -->
-                        <div class="agency-item">
-                            <div class="agency--img">
-                                <a href="agency-profile.html">
-                        <img src="assets/images/agency/3.png" alt="agency" class="img-responsive">
-						</a>
-                            </div>
-                            <!-- .agency-img end -->
-                            <div class="agency--content">
-                                <div class="clearfix mb-30">
-                                    <div class="pull-left">
-                                        <h5 class="agency--title"><a href="agency-profile.html">Rodeo Realty</a></h5>
-                                        <span class="agency--location"><i class="fa fa-map-marker"></i>7539 Sunny Ln, Los Angeles, CA 90046</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <div class="agency--social-links">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                                        </div>
-                                        <span class="Properties--number">8 Property</span>
-                                    </div>
-                                </div>
-                                <div class="agency--details">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                                </div>
-                                <!-- .agency-details end -->
-                                <div class="agency--contact">
-                                    <ul class="list-unstyled mb-0 clearfix">
-                                        <li><i class="fa fa-phone"></i>(960) 211-894-130</li>
-                                        <li><i class="fa fa-envelope-o"></i><a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2d0c7c6c7cdd0c7c3ced6dbe2cec3ccc68cc1cdcf">[email&#160;protected]</a></li>
-                                        <li><i class="fa fa-laptop"></i>modernhouse.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- .agency-content end -->
-                        </div>
+                       
                         <!-- .agency-item end -->
 
                         <!-- agency item #4 -->
-                        <div class="agency-item">
-                            <div class="agency--img">
-                                <a href="agency-profile.html">
-                        <img src="assets/images/agency/4.png" alt="agency" class="img-responsive">
-						</a>
-                            </div>
-                            <!-- .agency-img end -->
-                            <div class="agency--content">
-                                <div class="clearfix mb-30">
-                                    <div class="pull-left">
-                                        <h5 class="agency--title"><a href="agency-profile.html">Platinum Properties</a></h5>
-                                        <span class="agency--location"><i class="fa fa-map-marker"></i>4334 Country Hills, Plant City, FL 33563</span>
-                                    </div>
-                                    <div class="pull-right">
-                                        <div class="agency--social-links">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                                        </div>
-                                        <span class="Properties--number">21 Property</span>
-                                    </div>
-                                </div>
-                                <div class="agency--details">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                                </div>
-                                <!-- .agency-details end -->
-                                <div class="agency--contact">
-                                    <ul class="list-unstyled mb-0 clearfix">
-                                        <li><i class="fa fa-phone"></i>(045) 921-023-254</li>
-                                        <li><i class="fa fa-envelope-o"></i><a href="https://demo.zytheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e2e323f2a37302b332e2c312e3b2c2a373b2d1e323f303a703d3133">[email&#160;protected]</a></li>
-                                        <li><i class="fa fa-laptop"></i>modernhouse.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- .agency-content end -->
-                        </div>
+                       
                         <!-- .agency-item end -->
                     </div>
                     <!-- .col-md-12 end -->
@@ -248,7 +143,85 @@
 
 <script>
 export default {
+    data() {
+        return {
+            users : [
+                {
+                userId : 1542,
+                userProfilePic : "/assets/images/agency/1.png" , 
+                isAgent : true , //image object or name
+                // agentId : 125125,
 
+                isAgency : true ,
+                // agencyId : 124578 ,
+                isUnderAgency : false, // if not agency then check
+                personalDetails : {
+                    firstName : "Modern House",
+                    lastName : "",
+                    address : "153 Sandra Cir, Westfield, NJ 07090",
+                    // fullname , agent type are derived property
+                    email : "steve.martin@gmail.com",
+                    phone : '(950) 491-570-180',
+                    mobile : '(+20) 220-145-6330',
+                    website : 'modernhouse.com',
+                    fax : '(+44) 161-430-1620',
+                    aboutSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magrem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit"
+                },
+                hasAgents : [150150 , 120120] , 
+                properties : [12003] , // combined properties of all agents
+                },
+                {
+                userId : 1542,
+                userProfilePic : "/assets/images/agency/1.png" , 
+                isAgent : true , //image object or name
+                // agentId : 125125,
+
+                isAgency : true ,
+                // agencyId : 124578 ,
+                isUnderAgency : false, // if not agency then check
+                personalDetails : {
+                    firstName : "Modern House",
+                    lastName : "",
+                    address : "153 Sandra Cir, Westfield, NJ 07090",
+                    // fullname , agent type are derived property
+                    email : "steve.martin@gmail.com",
+                    phone : '(950) 491-570-180',
+                    mobile : '(+20) 220-145-6330',
+                    website : 'modernhouse.com',
+                    fax : '(+44) 161-430-1620',
+                    aboutSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit"
+                },
+                hasAgents : [150150 , 120120] , 
+                properties : [12003] , // combined properties of all agents
+                },
+                {
+                userId : 1542,
+                userProfilePic : "/assets/images/agency/1.png" , 
+                isAgent : true , //image object or name
+                // agentId : 125125,
+
+                isAgency : true ,
+                // agencyId : 124578 ,
+                isUnderAgency : false, // if not agency then check
+                personalDetails : {
+                    firstName : "Modern House",
+                    lastName : "",
+                    address : "153 Sandra Cir, Westfield, NJ 07090",
+                    // fullname , agent type are derived property
+                    email : "steve.martin@gmail.com",
+                    phone : '(950) 491-570-180',
+                    mobile : '(+20) 220-145-6330',
+                    website : 'modernhouse.com',
+                    fax : '(+44) 161-430-1620',
+                    aboutSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mrem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit"
+                },
+                hasAgents : [150150 , 120120] , 
+                properties : [12003] , // combined properties of all agents
+                },
+            ]
+        }
+    },
+    // need data which has isAgency = true 
 }
 </script>
 
