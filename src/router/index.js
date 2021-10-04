@@ -12,6 +12,8 @@ import SocialProfile from '../pages/SocialProfile.vue';
 import AddProperty from '../pages/AddProperty.vue';
 import MyProperties from '../pages/MyProperties.vue';
 import FavouriteProperties from '../pages/FavouriteProperties.vue';
+import Properties from '../pages/Properties.vue';
+import Property from '../pages/Property.vue';
 
 const router = new VueRouter({
     mode :'history',
@@ -20,6 +22,8 @@ const router = new VueRouter({
         {name : 'Agents' , path:'/Agents' , meta:{title : 'Lalan Real estate Agents'} , component :Agents },
         {name : 'Agent' , path:'/Agent/:name' , meta:{title : 'Agent - '} , component : Agent },
         {name : 'Agencies' , path:'/Agencies' , meta:{title : 'Agencies - '} , component : Agencies },
+        {name : 'Properties' , path:'/Properties' , meta:{title : 'Properties'} , component : Properties },
+        {name : 'Property' , path:'/Property' , meta:{title : 'Property'} , component : Property },
         {name : 'Agency' , path:'/Agency/:name' , meta:{title : 'Agency - '} , component : Agency },
         {name : 'About' , path:'/About' , meta:{title : 'About Lalan'} , component : About },
         {name : 'Contact' , path:'/Contact' , meta:{title : 'Contact Lalan'} , component : Contact },

@@ -1,0 +1,32 @@
+{
+    "propertyID" : 1542664,
+    "agentID" : "9876513137",
+    "name" : "1220 Petersham Town",
+    "price" : 70000,
+    "isFeatured" : true,
+    "description" : {
+        "details" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", 
+        "type" : "House",
+        "status" : "Sale" ,
+        "bedrooms" : 3 ,
+        "bathrooms" : 4 ,
+        "floor" : 2 ,
+        "garage" : 1 ,
+        "area" : 1250 ,
+        "size" : 625
+    },
+    "loaction" : {
+       "address" : "Ahmedabad , India 380009",
+       "country" : "India",
+       "city" : "Ahmedabd",
+       "state": "Gujrat",
+       "zip/postalCode" : 380009  ,
+       "neighborhood" : "CG road"
+    },
+    "media" : {
+        "photos" : [],
+        "videosUrl" : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+    }
+     
+
+}
