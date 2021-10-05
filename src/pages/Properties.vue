@@ -208,65 +208,10 @@
 
                         <!-- widget featured property
 =============================-->
-                        <div class="widget widget-featured-property">
-                            <div class="widget--title">
-                                <h5>Featured Properties</h5>
-                            </div>
-                            <div class="widget--content">
-                                <div class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
-                                    <!-- .property-item #1 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="assets/images/properties/13.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">House in Chicago</a></h5>
-                                                <p class="property--location">1445 N State Pkwy, Chicago, IL 60610</p>
-                                                <p class="property--price">$1200<span class="time">month</span></p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #2 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Villa in Oglesby Ave</a></h5>
-                                                <p class="property--location">1035 Oglesby Ave, Chicago, IL 60617</p>
-                                                <p class="property--price">$130,000<span class="time">month</span></p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #3 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Sale</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Apartment in Long St.</a></h5>
-                                                <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                                <p class="property--price">$70,000</p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                </div>
-                                <!-- .carousel end -->
-                            </div>
-                        </div>
+                        <featured-property-crousel />
+
                         <!-- . widget featured property end -->
+
                     </div>
                     <!-- .col-md-4 end -->
                     <div class="col-xs-12 col-sm-12 col-md-8">
@@ -295,10 +240,10 @@
                             </div>
                             <div class="properties properties-list">
                                 <!-- .col-md-12 end -->
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12" v-for="property in properties" :key="property.porpertyID">
                                     <!-- .property-item #1 -->
                                    <!-- <> -->
-                                      <div v-for="property in properties" :key="property.porpertyID" class="property-item">
+                                      <div  class="property-item">
                                         <div class="property--img">
                                             <router-link :to=" '/property/'+ property.porpertyID " >
                                             <img :src="property.media.photos" alt="property image" class="img-responsive">
@@ -326,7 +271,7 @@
                                 <!-- .property item end -->
 
                                 <!-- .property-item #2 -->
-                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="property-item">
                                         <div class="property--img">
                                             <a href="property-single-gallery.html">
@@ -349,7 +294,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <!-- .property item end -->
 
                                 <!-- .property-item #3 -->
@@ -463,28 +408,20 @@
 
         <!-- cta #1
 ============================================= -->
-        <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="assets/images/cta/bg-1.jpg" alt="Background"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <h3>Join our professional team & agents to start selling your house</h3>
-                        <a href="#" class="btn btn--primary">Contact</a>
-                    </div>
-                    <!-- .col-md-6 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
+        <call-to-action />
         <!-- #cta1 end -->
         <script type="application/javascript" defer src="/assets/js/functions.js"></script>
   </fragment>
 </template>
 
 <script>
+import CallToAction from '../components/CallToAction.vue'
+import FeaturedPropertyCrousel from '../components/FeaturedPropertyCrousel.vue'
 // import data from '../data.json';
+
 export default {
+  components: { FeaturedPropertyCrousel, CallToAction },
+  
     data() {
         return {
             properties : [

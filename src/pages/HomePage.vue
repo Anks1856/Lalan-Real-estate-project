@@ -7,193 +7,7 @@
 
         <!-- properties-carousel
 ============================================= -->
-        <section id="properties-carousel" class="properties-carousel pt-90 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Latest Properties</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-                        </div>
-                        <!-- .heading-title end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="carousel carousel-dots" data-slide="3" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
-                            <!-- .property-item #1 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Apartment in Long St.</a></h5>
-                                        <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                        <p class="property--price">$70,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #2 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/11.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title">Villa in Chicago IL</h5>
-                                        <p class="property--location">1445 N State Pkwy, Chicago, IL 60610</p>
-                                        <p class="property--price">$235,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">3</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">1120 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #3 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/5.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title">2750 House in Urban St.</h5>
-                                        <p class="property--location">2750 Urban Street Dr, Anderson, IN 46011</p>
-                                        <p class="property--price">$1,550<span class="time">month</span></p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">1390 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #4 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/4.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">House in Kent Street</a></h5>
-                                        <p class="property--location">127 Kent Street, Sydney, NSW 2000</p>
-                                        <p class="property--price">$130,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #5 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Villa in Oglesby Ave</a></h5>
-                                        <p class="property--location">1035 Oglesby Ave, Chicago, IL 60617</p>
-                                        <p class="property--price">$130,000<span class="time">month</span></p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">4</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">3</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #6 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Apartment in Long St.</a></h5>
-                                        <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                        <p class="property--price">$70,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                        </div>
-                        <!-- .carousel end -->
-                    </div>
-                    <!-- .col-md-12 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
+        <PropertyCrousel title="Latest Properties" description="Duis aute irure dolor in reprehed in volupted velit esse dolore" :properties="properties"/>
         <!-- #properties-carousel  end  -->
 
         <!-- Feature
@@ -262,220 +76,17 @@
         <!-- .feature end -->
         <!-- city-property
 ============================================= -->
-        <section id="city-property" class="city-property text-center pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Property By City</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-                        </div>
-                        <!-- .heading-title end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- City #1 -->
-                    <div class="col-xs-12 col-sm-8 col-md-8">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/1.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">New York</h5>
-                                <p class="property--numbers">16 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                    <!-- City #2 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/2.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Chicago</h5>
-                                <p class="property--numbers">14 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-
-                    <!-- City #3 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/3.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Manhatten</h5>
-                                <p class="property--numbers">18 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                    <!-- City #4 -->
-                    <div class="col-xs-12 col-sm-8 col-md-8">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/4.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Los Angeles</h5>
-                                <p class="property--numbers">10 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
+        <city-wise-property />
         <!-- .city-property end -->
 
         <!-- agents
 ============================================= -->
-        <section id="agents" class="agents bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Trusted Agents</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-                        </div>
-                        <!-- .heading end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- agent #1 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/1.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Steve Martin</h5>
-                                <h6 class="agent--position">Buying Agent</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- agent #2 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/2.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Mark Smith</h5>
-                                <h6 class="agent--position">Selling Agent</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- agent #3 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/3.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Ryan Printz</h5>
-                                <h6 class="agent--position">Real Estate Broker</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                </div>
-            </div>
-        </section>
+       <trusted-agents />
         <!-- #agents end  -->
 
         <!-- cta #1
 ============================================= -->
-        <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="assets/images/cta/bg-1.jpg" alt="Background"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <h3>Join our professional team & agents to start selling your house</h3>
-                        <a href="#" class="btn btn--primary">Contact</a>
-                    </div>
-                    <!-- .col-md-6 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
+       <call-to-action />
         <!-- #cta1 end -->
 
         <!-- Footer #1
@@ -486,11 +97,81 @@
 </template>
 
 <script>
-import Hero from '../components/HomePage/Hero.vue'
+import CallToAction from '../components/CallToAction.vue';
+import CityWiseProperty from '../components/HomePage/CityWiseProperty.vue';
+import Hero from '../components/HomePage/Hero.vue';
+import TrustedAgents from '../components/HomePage/TrustedAgents.vue';
+import PropertyCrousel from '../components/PropertyCrousel.vue';
+
 
 export default {
     components : {
-        Hero
+        Hero ,
+        PropertyCrousel,
+        CallToAction,
+        CityWiseProperty,
+        TrustedAgents
+
+    },
+    data() {
+        return {
+             properties : [ // data from props  call 
+                {
+                porpertyID : 15433,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    detailSummary1 : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.",
+                    detailSummary2 : "Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.",
+                    type : "house",
+                    status : "Sale",
+                    rooms : 6 ,
+                    bedrooms : 3 ,
+                    bathrooms : 4 ,
+                    floors : 2 ,
+                    garage: 1 ,
+                    area : 1250 ,
+                    size : 564
+                },
+                floorPlans : [
+                    {
+                        floorId : "floor1",
+                        floorNo : "Frist Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    },
+                    {
+                        floorId : "floor2",
+                        floorNo : "Second Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    }
+                ],
+                features : ["Center Cooling","Fire Alarm" ,"Pet Friendly","Gym" , "Pool" , "Balcony" , "Modern Kitchen" , "Storage" , "Heating"  , "Laundry" , "Elevator" , "Dish Washer"],
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videoUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            },
+            ]
+        }
+
     }
 }
 </script>

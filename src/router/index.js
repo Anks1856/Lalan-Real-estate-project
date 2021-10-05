@@ -2,9 +2,9 @@ import VueRouter from 'vue-router';
 
 import Home from '../pages/HomePage.vue';
 import Agents from '../pages/Agents.vue';
-import Agent from '../pages/Agent.vue';
+import AgentProfile from '../pages/AgentProfile.vue';
 import Agencies from '../pages/Agencies.vue';
-import Agency from '../pages/Agency.vue';
+import AgencyProfile from '../pages/AgencyProfile.vue';
 import About from '../pages/About.vue';
 import Contact from '../pages/Contact.vue';
 import UserProfile from '../pages/UserProfile.vue';
@@ -13,18 +13,18 @@ import AddProperty from '../pages/AddProperty.vue';
 import MyProperties from '../pages/MyProperties.vue';
 import FavouriteProperties from '../pages/FavouriteProperties.vue';
 import Properties from '../pages/Properties.vue';
-import Property from '../pages/Property.vue';
+import PropertyDetails from '../pages/PropertyDetails.vue';
 
 const router = new VueRouter({
     mode :'history',
     routes : [
         {name : 'Home' , path:'/' , meta:{title : 'welcome to lalan Real estate'} , component :Home },
         {name : 'Agents' , path:'/Agents' , meta:{title : 'Lalan Real estate Agents'} , component :Agents },
-        {name : 'Agent' , path:'/Agent/:name' , meta:{title : 'Agent - '} , component : Agent },
+        {name : 'AgentProfile' , path:'/Agent/:AgentId' , meta:{title : 'Agent - '} , component : AgentProfile },
         {name : 'Agencies' , path:'/Agencies' , meta:{title : 'Agencies - '} , component : Agencies },
         {name : 'Properties' , path:'/Properties' , meta:{title : 'Properties'} , component : Properties },
-        {name : 'Property' , path:'/Property/:propertyId' , meta:{title : 'Property'} , component : Property },
-        {name : 'Agency' , path:'/Agency/:name' , meta:{title : 'Agency - '} , component : Agency },
+        {name : 'PropertyDetails' , path:'/Property/:propertyId' , meta:{title : 'Property'} , component : PropertyDetails },
+        {name : 'AgentProfile' , path:'/Agency/:AgencyId' , meta:{title : 'Agency - '} , component : AgencyProfile },
         {name : 'About' , path:'/About' , meta:{title : 'About Lalan'} , component : About },
         {name : 'Contact' , path:'/Contact' , meta:{title : 'Contact Lalan'} , component : Contact },
         {name : 'UserProfile' , path:'/UserProfile' , meta:{title : 'User Profile'} , component : UserProfile },

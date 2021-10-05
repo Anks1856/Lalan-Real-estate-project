@@ -596,64 +596,7 @@
 
                         <!-- widget featured property
 =============================-->
-                        <div class="widget widget-featured-property">
-                            <div class="widget--title">
-                                <h5>Featured Properties</h5>
-                            </div>
-                            <div class="widget--content">
-                                <div class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
-                                    <!-- .property-item #1 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="/assets/images/properties/13.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title">House in Chicago</h5>
-                                                <p class="property--location">1445 N State Pkwy, Chicago, IL 60610</p>
-                                                <p class="property--price">$1200<span class="time">month</span></p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #2 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="/assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="#">Villa in Oglesby Ave</a></h5>
-                                                <p class="property--location">1035 Oglesby Ave, Chicago, IL 60617</p>
-                                                <p class="property--price">$130,000<span class="time">month</span></p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #3 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Sale</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="#">Apartment in Long St.</a></h5>
-                                                <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                                <p class="property--price">$70,000</p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                </div>
-                                <!-- .carousel end -->
-                            </div>
-                        </div>
+                       <FeaturedPropertyCrousel />
                         <!-- . widget featured property end -->
 
                         <!-- widget mortgage calculator
@@ -701,217 +644,29 @@
 
         <!-- properties-carousel
 ============================================= -->
-        <section id="properties-carousel" class="properties-carousel properties-grid pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2  mb-70">
-                            <h2 class="heading--title">Similar Properties</h2>
-                        </div>
-                        <!-- .heading-title end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="carousel carousel-dots" data-slide="3" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
-                            <!-- .property-item #1 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Apartment in Long St.</a></h5>
-                                        <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                        <p class="property--price">$70,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
+        <PropertyCrousel :properties="properties" title="Similar Properties"/>
 
-                            <!-- .property-item #2 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/11.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Villa in Chicago IL</a></h5>
-                                        <p class="property--location">1445 N State Pkwy, Chicago, IL 60610</p>
-                                        <p class="property--price">$235,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">3</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">1120 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #3 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/5.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">2750 House in Urban St.</a></h5>
-                                        <p class="property--location">2750 Urban Street Dr, Anderson, IN 46011</p>
-                                        <p class="property--price">$1,550<span class="time">month</span></p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">1390 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #4 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/4.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-							</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">House in Kent Street</a></h5>
-                                        <p class="property--location">127 Kent Street, Sydney, NSW 2000</p>
-                                        <p class="property--price">$130,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #5 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Villa in Oglesby Ave</a></h5>
-                                        <p class="property--location">1035 Oglesby Ave, Chicago, IL 60617</p>
-                                        <p class="property--price">$130,000<span class="time">month</span></p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">4</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">3</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                            <!-- .property-item #6 -->
-                            <div class="property-item">
-                                <div class="property--img">
-                                    <a href="#">
-                            <img src="/assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
-                                </div>
-                                <div class="property--content">
-                                    <div class="property--info">
-                                        <h5 class="property--title"><a href="#">Apartment in Long St.</a></h5>
-                                        <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                        <p class="property--price">$70,000</p>
-                                    </div>
-                                    <!-- .property-info end -->
-                                    <div class="property--features">
-                                        <ul class="list-unstyled mb-0">
-                                            <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                            <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                            <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
-                                        </ul>
-                                    </div>
-                                    <!-- .property-features end -->
-                                </div>
-                            </div>
-                            <!-- .property item end -->
-
-                        </div>
-                        <!-- .carousel end -->
-                    </div>
-                    <!-- .col-md-12 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
         <!-- #properties-carousel  end  -->
 
         <!-- cta #1
 ============================================= -->
-        <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="/assets/images/cta/bg-1.jpg" alt="Background"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <h3>Join our professional team & agents to start selling your house</h3>
-                        <a href="#" class="btn btn--primary">Contact</a>
-                    </div>
-                    <!-- .col-md-6 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
+        <call-to-action />
         <!-- #cta1 end -->
         <script type="application/javascript" defer src="/assets/js/functions.js"></script>
   </fragment>
 </template>
 
 <script>
+import CallToAction from '../components/CallToAction.vue';
+import FeaturedPropertyCrousel from '../components/FeaturedPropertyCrousel.vue';
+import PropertyCrousel from '../components/PropertyCrousel.vue';
+
 export default {
+    components:{
+        PropertyCrousel,
+        FeaturedPropertyCrousel,
+        CallToAction
+    },
  data() {
      return {
          property : {
@@ -984,7 +739,62 @@ export default {
                 message : "Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud",
                 rating : 4.5,
              }  
-         ]
+         ] ,
+         properties : [  
+                {
+                porpertyID : 15433,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    detailSummary1 : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.",
+                    detailSummary2 : "Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.",
+                    type : "house",
+                    status : "Sale",
+                    rooms : 6 ,
+                    bedrooms : 3 ,
+                    bathrooms : 4 ,
+                    floors : 2 ,
+                    garage: 1 ,
+                    area : 1250 ,
+                    size : 564
+                },
+                floorPlans : [
+                    {
+                        floorId : "floor1",
+                        floorNo : "Frist Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    },
+                    {
+                        floorId : "floor2",
+                        floorNo : "Second Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    }
+                ],
+                features : ["Center Cooling","Fire Alarm" ,"Pet Friendly","Gym" , "Pool" , "Balcony" , "Modern Kitchen" , "Storage" , "Heating"  , "Laundry" , "Elevator" , "Dish Washer"],
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videoUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            },
+            ]
      }
  }
 }
