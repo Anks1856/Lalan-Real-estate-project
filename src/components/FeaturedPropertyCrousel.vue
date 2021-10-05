@@ -8,12 +8,13 @@
                                     <!-- .property-item #1 -->
                                     <div v-for="property in properties" :key="property" class="property-item">
                                         <div class="property--img">
-                                            <img :src="property.media.photos" alt="property image" class="img-responsive">
+                                          <router-link :to=" '/property/'+ property.porpertyID">  <img :src="property.media.photos" alt="property image" class="img-responsive"> </router-link>
                                             <span class="property--status">For {{property.description.status}} </span>
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"> {{property.name}} </h5>
+                                               <router-link :to=" '/property/'+ property.porpertyID"> <h5 class="property--title"> {{property.name}} </h5> </router-link>
+
                                                 <p class="property--location"> {{property.location.address}} </p>
                                                 <p class="property--price">$ {{property.price}} <span class="time">month</span></p>
                                             </div>

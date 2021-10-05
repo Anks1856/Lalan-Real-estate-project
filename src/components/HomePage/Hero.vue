@@ -70,7 +70,7 @@
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-beds" id="select-beds"
                                                     v-model="searchObj.beds">
-                                        <option value="0">Beds</option>
+                                        <option value="">Beds</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -86,7 +86,7 @@
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-baths" id="select-baths"
                                                     v-model="searchObj.baths">
-                                        <option value="0">Baths</option>
+                                        <option value="">Baths</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -101,7 +101,7 @@
                                                 <p>
                                                     <label for="amount">Price Range: </label>
                                                     <input id="amount" type="text" 
-                                                    class="amount" value="" v-model="searchObj.minPrice">
+                                                    class="amount" value="" v-model="searchObj.priceRange">
                                                 </p>
                                                 <div class="slider-range"></div>
                                             </div>
@@ -125,21 +125,21 @@
                 <!-- Slide #1 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #2 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #3 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="/assets/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
@@ -155,17 +155,18 @@ export default {
                 location : "",
                 type : "",
                 status : "",
-                beds : 0,
-                baths : 0,
-                minPrice : 0,
-                maxPrice : 0
+                beds : '',
+                baths : '',
+                priceRange : '',
             }
         }
     },
     methods : {
         handleSearch() {
             console.log(this.searchObj);
-            this.$router.push('/properties')
+            // let urlObj = new ({name:"ankur"})
+            // console.log(urlObj);
+            this.$router.replace({path:'/properties' , query : {...this.searchObj}})
         }
     }
 

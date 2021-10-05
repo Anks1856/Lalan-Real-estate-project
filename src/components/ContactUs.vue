@@ -72,13 +72,12 @@ export default {
     },
     computed : {
         from() {
-            console.log(this.$route.params);
+            // console.log(this.$route.params);
             return "hello"
         }
     },
     methods : {
         handleSubmit() {
-            console.log('cliked',  this.ContactDetails);
             //need to logged into database
         },
         // need to send mail to agent or agency or 

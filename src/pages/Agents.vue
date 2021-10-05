@@ -55,7 +55,7 @@
                     <div v-for="user in users" :key="user.agentId" class="col-xs-12 col-sm-4 col-md-4">
                         <div class="agent">
                             <div class="agent--img">
-                              <router-link :to="'Agent/'+ user.personalDetails.firstName +'-'+user.personalDetails.lastName ">  <img :src="user.userProfilePic" alt="agent" /> </router-link>
+                              <router-link :to="'Agent/'+ user.agentId">  <img :src="user.userProfilePic" alt="agent" /> </router-link>
                                 <div class="agent--details">
                                     <p> {{user.personalDetails.aboutSummary}} </p>
                                     <div class="agent--social-links">

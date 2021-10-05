@@ -17,7 +17,7 @@
                     <div v-for="agent in agents" :key="agent.name" class="col-xs-12 col-sm-4 col-md-4">
                         <div class="agent">
                             <div class="agent--img">
-                                <img :src="agent.agentPhoto" alt="agent" />
+                                <router-link :to=" 'agent/' + agent.agencyId"> <img :src="agent.agentPhoto" alt="agent" /></router-link>
                                 <div class="agent--details">
                                     <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
                                     <div class="agent--social-links">
@@ -30,7 +30,7 @@
                             </div>
                             <!-- .agent-img end -->
                             <div class="agent--info">
-                                <h5 class="agent--title"> {{agent.agentName}} </h5>
+                               <router-link :to=" 'agent/' + agent.agencyId"> <h5 class="agent--title"> {{agent.agentName}} </h5></router-link>
                                 <h6 class="agent--position"> {{agent.agentType}} </h6>
                             </div>
                             <!-- .agent-info end -->
@@ -94,16 +94,19 @@ export default {
         return {
             agents : [ //get from Api which high rated
                 {
+                    agencyId : 154525,
                     agentName : "Steve Martin",
                     agentPhoto : ["/assets/images/agents/grid/1.png"],
                     agentType : "Buying Agent"
                 },
                 {
+                    agencyId : 154525,
                     agentName : "Steve Martin",
                     agentPhoto : ["/assets/images/agents/grid/1.png"],
                     agentType : "Buying Agent"
                 },
                 {
+                    agencyId : 154525,
                     agentName : "Steve Martin",
                     agentPhoto : ["/assets/images/agents/grid/1.png"],
                     agentType : "Buying Agent"

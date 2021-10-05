@@ -203,7 +203,12 @@ export default {
         }
     },
     //need to find agent wich name is in URL 
+ mounted(){
+        window.scrollTo(0,0)
+    }
+
 }
+
 </script>
 
 <style>

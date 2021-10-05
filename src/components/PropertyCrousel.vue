@@ -18,14 +18,14 @@
                             <!-- .property-item #1 -->
                             <div v-for="property in properties" :key="property.porpertyID" class="property-item">
                                 <div class="property--img">
-                                    <a href="#">
+                                    <router-link :to="'property/' +property.porpertyID">
                             <img :src="property.media.photos" alt="property image" class="img-responsive">
                             <span class="property--status">For {{property.description.status}} </span>
-</a>
+                                        </router-link>
                                 </div>
                                 <div class="property--content">
                                     <div class="property--info">
-                                        <h5 class="property--title"><a href="#"> {{property.name}} </a></h5>
+                                        <h5 class="property--title"><router-link :to="'property/' +property.porpertyID"> {{property.name}} </router-link></h5>
                                         <p class="property--location"> {{property.location.address}} </p>
                                         <p class="property--price">$ {{property.price}} </p>
                                     </div>

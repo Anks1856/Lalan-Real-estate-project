@@ -1,19 +1,19 @@
 /*global jQuery */
 /* Contents
 // ------------------------------------------------>
-	1.  BACKGROUND INSERT
-	2.  NAV MODULE
-	3.	MOBILE MENU
-	4.  HEADER AFFIX
-	5.  OWL CAROUSEL
-	6.  MAGNIFIC POPUP
-	7.  MAGNIFIC POPUP VIDEO
-	8.  SWITCH GRID
-	9.  SCROLL TO
-	10. SLIDER RANGE
-	11. Dropzone UPLOAD
-	12. REMOVE PROFILE PHOTO
-	13. SHOW OPTIONS
+    1.  BACKGROUND INSERT
+    2.  NAV MODULE
+    3.	MOBILE MENU
+    4.  HEADER AFFIX
+    5.  OWL CAROUSEL
+    6.  MAGNIFIC POPUP
+    7.  MAGNIFIC POPUP VIDEO
+    8.  SWITCH GRID
+    9.  SCROLL TO
+    10. SLIDER RANGE
+    11. Dropzone UPLOAD
+    12. REMOVE PROFILE PHOTO
+    13. SHOW OPTIONS
 
 */
 // $('#app').change(function(){
@@ -24,7 +24,7 @@
 //     console.log('hello')}
 // )
 
-(function() {
+(function () {
     "use strict";
 
     /* ------------------  Background INSERT ------------------ */
@@ -33,7 +33,7 @@
     var $bgPattern = $(".bg-pattern");
     var $colBg = $(".col-bg");
 
-    $bgSection.each(function() {
+    $bgSection.each(function () {
         var bgSrc = $(this).children("img").attr("src");
         var bgUrl = 'url(' + bgSrc + ')';
         $(this).parent().css("backgroundImage", bgUrl);
@@ -41,7 +41,7 @@
         $(this).remove();
     });
 
-    $bgPattern.each(function() {
+    $bgPattern.each(function () {
         var bgSrc = $(this).children("img").attr("src");
         var bgUrl = 'url(' + bgSrc + ')';
         $(this).parent().css("backgroundImage", bgUrl);
@@ -49,7 +49,7 @@
         $(this).remove();
     });
 
-    $colBg.each(function() {
+    $colBg.each(function () {
         var bgSrc = $(this).children("img").attr("src");
         var bgUrl = 'url(' + bgSrc + ')';
         $(this).parent().css("backgroundImage", bgUrl);
@@ -58,21 +58,21 @@
     });
 
     /* ------------------  NAV MODULE  ------------------ */
-	
+
     var $moduleIcon = $(".module-icon"),
         $moduleCancel = $(".module-cancel");
-    $moduleIcon.on("click", function(e) {
+    $moduleIcon.on("click", function (e) {
         $(this).parent().siblings().removeClass('module-active'); // Remove the class .active form any sibiling.
         $(this).parent(".module").toggleClass("module-active"); //Add the class .active to parent .module for this element.
         e.stopPropagation();
     });
     // If Click on [ Search-cancel ] Link
-    $moduleCancel.on("click", function(e) {
+    $moduleCancel.on("click", function (e) {
         $(".module").removeClass("module-active");
         e.stopPropagation();
     });
 
-    $(".side-nav-icon").on("click", function() {
+    $(".side-nav-icon").on("click", function () {
         if ($(this).parent().hasClass('module-active')) {
             $(".wrapper").addClass("hamburger-active");
             $(this).addClass("module-hamburger-close");
@@ -81,9 +81,9 @@
             $(this).removeClass("module-hamburger-close");
         }
     });
-	
+
     // If Click on [ Document ] and this click outside [ hamburger panel ]
-    $(document).on("click", function(e) {
+    $(document).on("click", function (e) {
         if ($(e.target).is(".hamburger-panel,.hamburger-panel .list-links,.hamburger-panel .list-links a,.hamburger-panel .social-share,.hamburger-panel .social-share a i,.hamburger-panel .social-share a,.hamburger-panel .copywright") === false) {
             $(".wrapper").removeClass("page-transform"); // Remove the class .active form .module when click on outside the div.
             $(".module-side-nav").removeClass("module-active");
@@ -92,7 +92,7 @@
     });
 
     // If Click on [ Document ] and this click outside [ module ]
-    $(document).on("click", function(e) {
+    $(document).on("click", function (e) {
         if ($(e.target).is(".module, .module-content, .search-form input,.cart-control .btn,.cart-overview a.cancel,.cart-box") === false) {
             $module.removeClass("module-active"); // Remove the class .active form .module when click on outside the div.
             e.stopPropagation();
@@ -103,18 +103,18 @@
 
     var $dropToggle = $("ul.dropdown-menu [data-toggle=dropdown]"),
         $module = $(".module");
-    $dropToggle.on("click", function(event) {
+    $dropToggle.on("click", function (event) {
         event.preventDefault();
         event.stopPropagation();
         $(this).parent().siblings().removeClass("open");
         $(this).parent().toggleClass("open");
     });
 
-    $module.on("click", function() {
+    $module.on("click", function () {
         $(this).toggleClass("toggle-module");
     });
-	
-    $module.find("input.form-control", ".btn", ".module-cancel").on("click", function(e) {
+
+    $module.find("input.form-control", ".btn", ".module-cancel").on("click", function (e) {
         e.stopPropagation();
     });
 
@@ -129,7 +129,7 @@
 
     /* ------------------ OWL CAROUSEL ------------------ */
 
-    $(".carousel").each(function() {
+    $(".carousel").each(function () {
         var $Carousel = $(this);
         $Carousel.owlCarousel({
             loop: $Carousel.data('loop'),
@@ -167,7 +167,7 @@
             enabled: true
         }
     });
-	
+
     /* ------------------  MAGNIFIC POPUP VIDEO ------------------ */
 
     $('.popup-video,.popup-gmaps').magnificPopup({
@@ -195,23 +195,23 @@
 
     /* ------------------  SWITCH GRID ------------------ */
 
-    $('#switch-list').on("click", function(event) {
+    $('#switch-list').on("click", function (event) {
         event.preventDefault();
         $(this).addClass('active');
         $(this).siblings().removeClass("active");
-        $(".properties").each(function() {
+        $(".properties").each(function () {
             $(this).addClass('properties-list');
             $(this).removeClass('properties-grid');
         });
 
     });
-	
-    $('#switch-grid').on("click", function(event) {
+
+    $('#switch-grid').on("click", function (event) {
 
         event.preventDefault();
         $(this).addClass('active');
         $(this).siblings().removeClass("active");
-        $(".properties").each(function() {
+        $(".properties").each(function () {
             $(this).addClass('properties-grid');
             $(this).removeClass('properties-list');
         });
@@ -221,7 +221,7 @@
     /* ------------------  SCROLL TO ------------------ */
 
     var aScroll = $('a[data-scroll="scrollTo"]');
-    aScroll.on('click', function(event) {
+    aScroll.on('click', function (event) {
         var target = $($(this).attr('href'));
         if (target.length) {
             event.preventDefault();
@@ -240,16 +240,19 @@
     var $sliderRange = $(".slider-range"),
         $sliderAmount = $(".amount");
     $sliderRange.each(function() {
-        $(this).slider({
+        let val = $(this).closest('.filter').find($sliderAmount)[0].value
+        let arr = val &&  val.replaceAll('$','').split(' - ')
+        
+        $(this).slider({    
             range: true,
             min: 0,
             max: 1000,
-            values: [0, 1000],
+            values: val ? [arr[0], arr[1]] : [0, 1000] ,
             slide: function(event, ui) {
-                $(this).closest('.filter').find($sliderAmount).val("$" + ui.values[0] + " - $" + ui.values[1]);
+                $(this).closest('.filter').find($sliderAmount).val("$" + ui.values[0] + " - $" + ui.values[1])[0].dispatchEvent(new Event('input'));
             }
         });
-        $(this).closest('.filter').find($sliderAmount).val("$" + $sliderRange.slider("values", 0) + " - $" + $sliderRange.slider("values", 1));
+        $(this).closest('.filter').find($sliderAmount).val("$" + $sliderRange.slider("values", 0) + " - $" + $sliderRange.slider("values", 1))[0].dispatchEvent(new Event('input'));
     });
 
     /*-------------------  Dropzone UPLOAD ---------------------*/
@@ -259,27 +262,27 @@
         $("#dZUpload").dropzone({
             url: "hn_SimpeFileUploader.ashx",
             addRemoveLinks: true,
-            success: function(file, response) {
+            success: function (file, response) {
                 var imgName = response;
                 file.previewElement.classList.add("dz-success");
                 console.log("Successfully uploaded :" + imgName);
             },
-            error: function(file, response) {
+            error: function (file, response) {
                 file.previewElement.classList.add("dz-error");
             }
         });
     }
 
     /*------------ REMOVE PROFILE PHOTO --------*/
-	
-    $('.delete--img').on("click", function() {
+
+    $('.delete--img').on("click", function () {
         $('.output--img').remove();
         event.preventDefault();
     });
-	
+
     /*------------ SHOW OPTIONS --------*/
-	
-    $('.less--options').on("click", function() {
+
+    $('.less--options').on("click", function () {
         $('.option-hide').slideToggle('slow');
         $(this).toggleClass('active');
         event.preventDefault();

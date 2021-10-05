@@ -17,15 +17,15 @@
                     <div class="col-xs-12 col-sm-8 col-md-8">
                         <div class="property-city-item">
                             <div class="property--city-img">
-                                <a href="#">
+                                <router-link :to="{path: '/properties' , query:{location : cities[0].name }}">
                         <img :src="cities[0].famousImage" alt="city" class="img-responsive">
                         <div class="property--city-overlay">
                             <div class="property--item-content">
-                                <h5 class="property--title"> {{cities[0].name}}   </h5>
+                                <h5 class="property--title"> {{cities[0].name}} </h5>
                                 <p class="property--numbers"> {{cities[0].totalProperties}} Properties </p>
                             </div>
                         </div>
-						</a>
+						</router-link>
                             </div>
                             <!-- .property-city-img end -->
                         </div>
@@ -36,7 +36,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="property-city-item">
                             <div class="property--city-img">
-                                <a href="#">
+                                <router-link :to="{path: '/properties' , query:{location : cities[1].name }}">
                         <img :src="cities[1].famousImage" alt="city" class="img-responsive">
                         <div class="property--city-overlay">
                             <div class="property--item-content">
@@ -44,7 +44,7 @@
                                 <p class="property--numbers"> {{cities[1].totalProperties}} Properties</p>
                             </div>
                         </div>
-						</a>
+						</router-link >
                             </div>
                             <!-- .property-city-img end -->
                         </div>
@@ -59,7 +59,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="property-city-item">
                             <div class="property--city-img">
-                                <a href="#">
+                                <router-link :to="{path: '/properties' , query:{location : cities[2].name }}">
                         <img :src="cities[2].famousImage" alt="city" class="img-responsive">
                         <div class="property--city-overlay">
                             <div class="property--item-content">
@@ -67,7 +67,7 @@
                                 <p class="property--numbers"> {{cities[2].totalProperties}} Properties</p>
                             </div>
                         </div>
-						</a>
+						</router-link>
                             </div>
                             <!-- .property-city-img end -->
                         </div>
@@ -78,7 +78,7 @@
                     <div class="col-xs-12 col-sm-8 col-md-8">
                         <div class="property-city-item">
                             <div class="property--city-img">
-                                <a href="#">
+                                <router-link :to="{path: '/properties' , query:{location : cities[3].name }}">
                         <img :src="cities[3].famousImage" alt="city" class="img-responsive">
                         <div class="property--city-overlay">
                             <div class="property--item-content">
@@ -86,7 +86,7 @@
                                 <p class="property--numbers"> {{cities[3].totalProperties}} Properties</p>
                             </div>
                         </div>
-						</a>
+						</router-link>
                             </div>
                             <!-- .property-city-img end -->
                         </div>
