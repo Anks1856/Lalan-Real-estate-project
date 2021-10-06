@@ -37,10 +37,10 @@ const router = new VueRouter({
 })
 
 //acticity which after route is heppend 
-router.afterEach((to, from) => {
-    console.log('After Each (Global)', from)
-    document.title = to.meta.title || "Lalan Real Estate Project"
-})
+// router.afterEach((to, from) => {
+//     // console.log('After Each (Global)', from)
+//     document.title = to.meta.title || "Lalan Real Estate Project"
+// })
 
 
 

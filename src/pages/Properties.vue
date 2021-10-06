@@ -1,5 +1,6 @@
 <template>
   <fragment>
+      <!-- hero component -->
       <hero />
         <!-- #map end -->
             
@@ -9,273 +10,9 @@
         <section id="properties-list">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <!-- widget property type
-=============================-->
-                        <div class="widget widget-property">
-                            <div class="widget--title">
-                                <h5>Property Type</h5>
-                            </div>
-                            <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">Apartments <span>(13)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Houses <span>(8)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Offices <span>(3)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Villas <span>(4)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Land <span>(2)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- . widget property type end -->
-
-                        <!-- widget property status
-=============================-->
-                        <div class="widget widget-property">
-                            <div class="widget--title">
-                                <h5>Property Status</h5>
-                            </div>
-                            <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">For Rent <span>(25)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">For Sale <span>(32)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- . widget property status end -->
-
-
-                        <!-- widget property city
-=============================-->
-                        <div class="widget widget-property">
-                            <div class="widget--title">
-                                <h5>Property By City</h5>
-                            </div>
-                            <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">London <span>(5)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sydney <span>(10)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">New York <span>(4)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Paris <span>(7)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- . widget property city end -->
-
-
-                        <!-- widget featured property
-=============================-->
-                        <featured-property-crousel />
-
-                        <!-- . widget featured property end -->
-
-                    </div>
+                        <properties-statistics />
                     <!-- .col-md-4 end -->
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="properties-filter clearfix">
-                                    <div class="select--box pull-left">
-                                        <label>Sort by:</label>
-                                        <i class="fa fa-angle-up"></i>
-                                        <i class="fa fa-angle-down"></i>
-                                        <select>
-								<option selected="" value="Default">Default Sorting</option>
-								<option value="Larger">Newest Items</option>
-								<option value="Larger">oldest Items</option>
-								<option value="Larger">Hot Items</option>
-								<option value="Small">Highest Price</option>
-								<option value="Medium">Lowest Price</option>
-							</select>
-                                    </div>
-                                    <!-- .select-box -->
-                                    <div class="view--type pull-right">
-                                        <a id="switch-list" href="#" class="active"><i class="fa fa-th-list"></i></a>
-                                        <a id="switch-grid" href="#" class=""><i class="fa fa-th-large"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="properties properties-list">
-                                <!-- .col-md-12 end -->
-                                <div class="col-xs-12 col-sm-12 col-md-12" v-for="property in properties" :key="property.porpertyID">
-                                    <!-- .property-item #1 -->
-                                   <!-- <> -->
-                                      <div  class="property-item">
-                                        <div class="property--img">
-                                            <router-link :to=" '/property/'+ property.porpertyID " >
-                                            <img :src="property.media.photos" alt="property image" class="img-responsive">
-                                            </router-link>
-                                            <span class="property--status">For {{property.description.status}}</span>
-                                        </div> 
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">{{property.name}}</a></h5>
-                                                <p class="property--location">{{property.location.address}}</p>
-                                                <p class="property--price">${{property.price}}</p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                            <div class="property--features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">{{property.description.bedrooms}}</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">{{property.description.bathrooms}}</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">{{property.description.area}} sq ft</span></li>
-                                                </ul>
-                                            </div>
-                                            <!-- .property-features end -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .property item end -->
-
-                                <!-- .property-item #2 -->
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <a href="property-single-gallery.html">
-                                <img src="assets/images/properties/6.jpg" alt="property image" class="img-responsive">
-								</a>
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Apartment For Rent</a></h5>
-                                                <p class="property--location">1609 N Richmond St, Chicago, IL 60647</p>
-                                                <p class="property--price">$900<span class="time">month</span></p>
-                                            </div>
-                                            <div class="property--features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">1</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">500 sq ft</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .property item end -->
-
-                                <!-- .property-item #3 -->
-                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <a href="property-single-gallery.html">
-                                <img src="assets/images/properties/5.jpg" alt="property image" class="img-responsive">
-								</a>
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">2750 House in Urban St.</a></h5>
-                                                <p class="property--location">2750 Urban Street Dr, Anderson, IN 46011</p>
-                                                <p class="property--price">$1.550<span class="time">month</span></p>
-                                            </div>
-                                            <div class="property--features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">1390 sq ft</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- .property item end -->
-
-                                <!-- .property-item #4 -->
-                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <a href="property-single-gallery.html">
-                                <img src="assets/images/properties/12.jpg" alt="property image" class="img-responsive">
-								</a>
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Modern Office For Rent</a></h5>
-                                                <p class="property--location">2003 Sheffield Ave, Anderson, IN 46011</p>
-                                                <p class="property--price">$530<span class="time">month</span></p>
-                                            </div>
-                                            <div class="property--features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">0</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">150 sq ft</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- .property item end -->
-
-                                <!-- .property-item #5 -->
-                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <a href="property-single-gallery.html">
-                                <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-								</a>
-                                            <span class="property--status">For Sale</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Apartment in Long St.</a></h5>
-                                                <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                                <p class="property--price">$70,000</p>
-                                            </div> -->
-                                            <!-- .property-info end -->
-                                            <!-- <div class="property--features">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
-                                                </ul>
-                                            </div> -->
-                                            <!-- .property-features end -->
-                                        <!-- </div>
-                                    </div>
-                                </div> -->
-                                <!-- .property item end -->
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-50">
-                                <ul class="pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
-                            </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- .col-md-12 end -->
-                        </div>
-                        <!-- .row -->
-                    </div>
+                        <property-listing :datas="datas" :properties="properties" @getMoreData="handleMoreData"/> 
                     <!-- .col-md-8 end -->
                 </div>
                 <!-- .row -->
@@ -286,6 +23,7 @@
 
         <!-- cta #1
 ============================================= -->
+{{searchUpdate}}
         <call-to-action />
         <!-- #cta1 end -->
         <script type="application/javascript" defer src="/assets/js/functions.js"></script>
@@ -294,16 +32,18 @@
 
 <script>
 import CallToAction from '../components/CallToAction.vue'
-import FeaturedPropertyCrousel from '../components/FeaturedPropertyCrousel.vue'
+// import FeaturedPropertyCrousel from '../components/FeaturedPropertyCrousel.vue'
 import Hero from '../components/PropertyListingPage/Hero.vue';
+import PropertiesStatistics from '../components/PropertyListingPage/PropertiesStatistics.vue';
+import PropertyListing from '../components/PropertyListingPage/PropertyListing.vue';
 // import data from '../data.json';
 
 export default {
-  components: { FeaturedPropertyCrousel, CallToAction ,Hero},
+  components: { CallToAction ,Hero, PropertyListing, PropertiesStatistics},
     
     data() {
         return {
-            properties : [
+            properties : [// evry time need to pass 6 property data
                 {
                 porpertyID : 15433,
                 agentId : 54686,
@@ -338,7 +78,127 @@ export default {
                 porpertyID : 12003,
                 agentId : 54686,
                 name : "1220 Petersham Town" ,
-                price : 70000,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    destails : "lorem50",
+                    type : "house",
+                    status : "Sale",
+                    bedrooms : 3 ,
+                    bathrooms : 4,
+                    floor : 2,
+                    garage: 1,
+                    area : 1250 ,
+                    size : 564
+                },
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            } ,
+             {
+                porpertyID : 12003,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    destails : "lorem50",
+                    type : "house",
+                    status : "Sale",
+                    bedrooms : 3 ,
+                    bathrooms : 4,
+                    floor : 2,
+                    garage: 1,
+                    area : 1250 ,
+                    size : 564
+                },
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            } ,
+             {
+                porpertyID : 12003,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    destails : "lorem50",
+                    type : "house",
+                    status : "Sale",
+                    bedrooms : 3 ,
+                    bathrooms : 4,
+                    floor : 2,
+                    garage: 1,
+                    area : 1250 ,
+                    size : 564
+                },
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            } ,
+             {
+                porpertyID : 12003,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    destails : "lorem50",
+                    type : "house",
+                    status : "Sale",
+                    bedrooms : 3 ,
+                    bathrooms : 4,
+                    floor : 2,
+                    garage: 1,
+                    area : 1250 ,
+                    size : 564
+                },
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            } ,
+            {
+                porpertyID : 12003,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
                 isFeatured : true ,
                 description : {
                     destails : "lorem50",
@@ -364,9 +224,33 @@ export default {
                     videosUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
                 }
             } 
-            ]
+            ],
+            datas : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
         }
     },
+    computed : {
+        searchUpdate() {
+            if(Object.keys({...this.$route.query}).length != 0){
+                console.log("Search Api call");
+            }
+            else {
+                console.log("All property listing API call");
+            }
+        return this.$route.query
+        }
+    },
+    methods : {
+        handleMoreData() {
+            console.log("from perent");
+           const newData = [19,20,21,22,23,24,25,26,27,28,29,30]
+            this.datas.push(...newData)
+        }
+    },
+    // created() {
+    //     console.log('created' , this.$route.query);
+    //     console.log('do API call if user come from home page with search query OR directly land on property page');
+
+    // },
     mounted(){
         window.scrollTo(0,500)
     }

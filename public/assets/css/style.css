@@ -2365,7 +2365,7 @@ ul.dot-list li i {
 	display: inline-block;
 }
 
-.pagination > li > a,
+.pagination > li > p,
 .pagination > li > span {
 	background-color: transparent;
 	color: #34495e;
@@ -2382,8 +2382,8 @@ ul.dot-list li i {
 	border-radius: 2px;
 }
 
-.pagination > .active > a,
-.pagination > li:hover > a {
+.pagination > .active > p,
+.pagination > li:hover > p {
 	background-color: #64ddbb !important;
 	color: #ffffff;
 	border-color: #64ddbb;
@@ -2391,7 +2391,7 @@ ul.dot-list li i {
 	border: none;
 }
 
-.pagination > li > a:focus {
+.pagination > li > p:focus {
 	background-color: transparent;
 }
 
@@ -7550,31 +7550,32 @@ ul.comments-list ul.comment-children {
 }
 
 /* property Widget */
-.widget-property ul li a {
+.widget-property ul li p {
 	color: #aaaaaa;
 	font-size: 14px;
-	line-height: 35px;
+	line-height: 15px;
 	position: relative;
 	display: block;
 	text-transform: capitalize;
 	padding-left: 15px;
+	cursor: pointer;
 }
 
-.widget-property ul li a:after {
+.widget-property ul li p:after {
 	position: absolute;
 	top: 0;
 	left: 0;
 	content: "\f105";
 	font-family: fontawesome;
-	line-height: 35px;
+	line-height: 15px;
 }
 
-.widget-property ul li a:hover,
-.widget-property ul li a:hover:after {
+.widget-property ul li p:hover,
+.widget-property ul li p:hover:after {
 	color: #64ddbb;
 }
 
-.widget-property ul li a span {
+.widget-property ul li p span {
 	float: right;
 }
 

@@ -131,7 +131,7 @@
 export default {
     data(){
         return {
-            searchObj : {
+            searchObject : {
                 location : "",
                 type : "",
                 status : "",
@@ -143,12 +143,13 @@ export default {
 
     },
     created(){
-        this.searchObject = Object.keys({...this.$route.query}).length != 0 ? {...this.searchObj,...this.$route.query} : {...this.searchObj}
+        // this.searchObject = Object.keys({...this.$route.query}).length != 0 ? {...this.searchObj,...this.$route.query} : {...this.searchObj}
+        this.searchObject = {...this.searchObject,...this.$route.query}
     },
     methods : {
         handleSubmit(){
             console.log('submited');
-            this.$router.replace({path:'/properties' , query : {...this.searchObject}})
+            this.$router.push({path:'/properties' , query : {...this.searchObject}})
         }
     }
 

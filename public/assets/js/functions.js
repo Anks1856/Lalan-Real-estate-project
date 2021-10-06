@@ -282,10 +282,14 @@
 
     /*------------ SHOW OPTIONS --------*/
 
-    $('.less--options').on("click", function () {
-        $('.option-hide').slideToggle('slow');
-        $(this).toggleClass('active');
+    $(".less--options").on("click", function() {
+        $(".option-hide").slideToggle("slow");
+        $(this).toggleClass("active");
+        // $(this).text("less options");
+        $(this).html(
+          $(this).html() == "More options" ? "Less options" : "More options"
+        );
         event.preventDefault();
-    });
+      });
 
 }($));

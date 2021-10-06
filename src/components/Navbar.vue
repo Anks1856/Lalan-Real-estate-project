@@ -28,23 +28,23 @@
                                     <li><a href="home-property.html">home property</a></li>
                                     <li><a href="home-splash.html">home splash</a></li>
                                 </ul> -->
-                                <router-link to="/" style="font-size:1.2rem">Home</router-link>
+                                <router-link to="/">Home</router-link>
                             </li>
                             <li class="active">
-                                <router-link to="/properties" style="font-size:1.2rem">Properties</router-link>
+                                <router-link to="/properties">Properties</router-link>
                             </li>
                             <li class="active">
-                                <router-link to="/Agents" style="font-size:1.2rem">Agents</router-link>
+                                <router-link to="/Agents">Agents</router-link>
                             </li>
                             <li class="active">
-                                <router-link to="/Agencies" style="font-size:1.2rem">Agencies</router-link>
+                                <router-link to="/Agencies">Agencies</router-link>
                             </li>
                             
                             <li class="active">
-                                <router-link to="/About" style="font-size:1.2rem">About</router-link>
+                                <router-link to="/About">About</router-link>
                             </li>
                             <li class="active">
-                                <router-link to="/Contact" style="font-size:1.2rem">Contact</router-link>
+                                <router-link to="/Contact">Contact</router-link>
                             </li>
                             <!-- <li class="active">
                                 <router-link to="/Agencies" style="font-size:1.5rem">My Profile</router-link>
@@ -110,7 +110,7 @@
 
                             <!-- Profile Menu-->
                             <li class="has-dropdown">
-                                <a href="#" style="font-size:1.2rem" data-toggle="dropdown" class="dropdown-toggle menu-item">My Profile</a>
+                                <a href="#"  data-toggle="dropdown" class="dropdown-toggle menu-item">My Profile</a>
                                 <ul class="dropdown-menu">
                                     <li><router-link to="/UserProfile">user profile</router-link></li>
                                     <li><router-link to="/SocialProfile">social profile</router-link></li>

@@ -6,7 +6,7 @@
                             <div class="widget--content">
                                 <div class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
                                     <!-- .property-item #1 -->
-                                    <div v-for="property in properties" :key="property" class="property-item">
+                                    <div v-for="property in properties" :key="property.porpertyID" class="property-item">
                                         <div class="property--img">
                                           <router-link :to=" '/property/'+ property.porpertyID">  <img :src="property.media.photos" alt="property image" class="img-responsive"> </router-link>
                                             <span class="property--status">For {{property.description.status}} </span>
