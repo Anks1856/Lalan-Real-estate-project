@@ -76,17 +76,17 @@
         <!-- .feature end -->
         <!-- city-property
 ============================================= -->
-        <city-wise-property />
+        <CityWiseProperty />
         <!-- .city-property end -->
 
         <!-- agents
 ============================================= -->
-       <trusted-agents />
+       <TrustedAgents />
         <!-- #agents end  -->
 
         <!-- cta #1
 ============================================= -->
-       <call-to-action />
+       <CallToAction />
         <!-- #cta1 end -->
 
         <!-- Footer #1
@@ -116,6 +116,112 @@ export default {
     data() {
         return {
              properties : [ // data from props  call 
+                {
+                porpertyID : 15433,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    detailSummary1 : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.",
+                    detailSummary2 : "Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.",
+                    type : "house",
+                    status : "Sale",
+                    rooms : 6 ,
+                    bedrooms : 3 ,
+                    bathrooms : 4 ,
+                    floors : 2 ,
+                    garage: 1 ,
+                    area : 1250 ,
+                    size : 564
+                },
+                floorPlans : [
+                    {
+                        floorId : "floor1",
+                        floorNo : "Frist Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    },
+                    {
+                        floorId : "floor2",
+                        floorNo : "Second Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    }
+                ],
+                features : ["Center Cooling","Fire Alarm" ,"Pet Friendly","Gym" , "Pool" , "Balcony" , "Modern Kitchen" , "Storage" , "Heating"  , "Laundry" , "Elevator" , "Dish Washer"],
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videoUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            },
+                {
+                porpertyID : 15433,
+                agentId : 54686,
+                name : "1220 Petersham Town" ,
+                price : 170000,
+                isFeatured : true ,
+                description : {
+                    detailSummary1 : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur.",
+                    detailSummary2 : "Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.",
+                    type : "house",
+                    status : "Sale",
+                    rooms : 6 ,
+                    bedrooms : 3 ,
+                    bathrooms : 4 ,
+                    floors : 2 ,
+                    garage: 1 ,
+                    area : 1250 ,
+                    size : 564
+                },
+                floorPlans : [
+                    {
+                        floorId : "floor1",
+                        floorNo : "Frist Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    },
+                    {
+                        floorId : "floor2",
+                        floorNo : "Second Floor",
+                        size : 653 ,
+                        rooms : 3 , // need to validate
+                        baths : 4 ,
+                        detailSummary : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupte velit esse cillum dolore eu fugia",
+                        planImage : ["/assets/images/property-single/1.png"] // image object or name
+                    }
+                ],
+                features : ["Center Cooling","Fire Alarm" ,"Pet Friendly","Gym" , "Pool" , "Balcony" , "Modern Kitchen" , "Storage" , "Heating"  , "Laundry" , "Elevator" , "Dish Washer"],
+                location : {
+                    address : "Ahmedabad , India 380009",
+                    country : "India",
+                    city : "Ahmedabad",
+                    state : "Gujrat",
+                    zipcode: 380009 ,
+                    neighborhood : "CG road"
+                },
+                media : {
+                    photos : ["/assets/images/properties/1.jpg"],
+                    videoUrl : "https://www.youtube.com/watch?v=t_dxBfgG0aU&ab_channel=RafiqueMerchant"
+                }
+            },
                 {
                 porpertyID : 15433,
                 agentId : 54686,

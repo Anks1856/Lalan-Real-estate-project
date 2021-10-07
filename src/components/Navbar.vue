@@ -21,13 +21,7 @@
                         <ul class="nav navbar-nav nav-pos-center navbar-left">
                             <!-- Home Menu -->
                             <li  class="active">
-                                <!-- <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">home</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index-2.html">home search</a></li>
-                                    <li><a href="home-map.html">home map</a></li>
-                                    <li><a href="home-property.html">home property</a></li>
-                                    <li><a href="home-splash.html">home splash</a></li>
-                                </ul> -->
+                           
                                 <router-link to="/">Home</router-link>
                             </li>
                             <li class="active">
@@ -44,72 +38,11 @@
                                 <router-link to="/About">About</router-link>
                             </li>
                             <li class="active">
-                                <router-link to="/Contact">Contact</router-link>
+                                <router-link to="/Contact">Contact </router-link>
                             </li>
-                            <!-- <li class="active">
-                                <router-link to="/Agencies" style="font-size:1.5rem">My Profile</router-link>
-                            </li> -->
-                            <!-- <li class="active">
-                                <router-link to="/Agent/anks" style="font-size:1.5rem">Single Agent</router-link>
-                            </li> -->
-                            <!-- <li class="active">
-                                <router-link to="/Agency/anks" style="font-size:1.5rem">Single Agency</router-link>
-                            </li> -->
-                            <!-- li end -->
-
-                            <!-- Pages Menu -->
-                            <!-- <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">agents</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="agents.html">All Agents</a>
-                                            </li>
-                                            <li>
-                                                <a href="agent-profile.html">agent profile</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">agencies</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="agency-list.html">all agencies</a>
-                                            </li>
-                                            <li>
-                                                <a href="agency-profile.html">agency profile</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">blog</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="blog.html">blog Grid</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-sidebar-right.html">blog Grid Right </a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-sidebar-left.html">blog Grid Left </a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-single.html">blog single</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="page-about.html">page about</a></li>
-                                    <li><a href="page-contact.html">page contact</a></li>
-                                    <li><a href="page-faq.html">page FAQ</a></li>
-                                    <li><a href="page-404.html">page 404</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- li end -->
-
+                          
                             <!-- Profile Menu-->
-                            <li class="has-dropdown">
+                            <li v-if="isLoggedIn" class="has-dropdown">
                                 <a href="#"  data-toggle="dropdown" class="dropdown-toggle menu-item">My Profile</a>
                                 <ul class="dropdown-menu">
                                     <li><router-link to="/UserProfile">user profile</router-link></li>
@@ -119,54 +52,12 @@
                                     <li><router-link to="/AddProperty">add property</router-link></li>
                                 </ul>
                             </li>
-                            <!-- li end -->
 
-                            <!-- Properties Menu-->
-                          <!--   <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Properties</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Properties grid</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="properties-grid.html">properties grid</a>
-                                            </li>
-                                            <li>
-                                                <a href="properties-grid-split.html">properties grid split</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">properties list</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="properties-list.html">properties list</a>
-                                            </li>
-                                            <li>
-                                                <a href="properties-list-split.html">properties list split</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">properties single</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="property-single-gallery.html">single gallery</a>
-                                            </li>
-                                            <li>
-                                                <a href="property-single-slider.html">single slider</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> -->
-                            <!-- li end -->
-
-                            <!-- <li><a href="page-contact.html">contact</a></li> -->
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
-                            <a class="btn-popup" data-toggle="modal" data-target="#signupModule">Login</a>
+                            <a class="btn-popup" v-if="!isLoggedIn" data-toggle="modal" data-target="#signupModule">Login</a>
+                            <a class="btn-popup"  v-else @click="handleLogout">logout</a>
                             <div class="modal register-login-modal fade" tabindex="-1" role="dialog" id="signupModule">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
@@ -184,17 +75,19 @@
                                                 <div class="tab-content">
                                                     <div class="tab-pane fade in active" id="login">
                                                         <div class="signup-form-container text-center">
-                                                            <form class="mb-0">
+                                                            <!-- {{loginDetails}} -->
+                                                            <form class="mb-0" @submit.prevent="handleLogin">
                                                                 <a href="#" class="btn btn--facebook btn--block"><i class="fa fa-facebook-square"></i>Login with Facebook</a>
                                                                 <div class="or-text">
                                                                     <span>or</span>
                                                                 </div>
+                                                                    <p v-if="loginErrorMessage" style="color:red"> {{loginErrorMessage}}</p>
                                                                 <div class="form-group">
-                                                                    <input type="email" class="form-control" name="login-email" id="login-email" placeholder="Email Address">
+                                                                    <input type="email" v-model="loginDetails.email" class="form-control" name="login-email" id="login-email" placeholder="Email Address">
                                                                 </div>
                                                                 <!-- .form-group end -->
                                                                 <div class="form-group">
-                                                                    <input type="password" class="form-control" name="login-password" id="login-password" placeholder="Password">
+                                                                    <input type="password" v-model="loginDetails.password" class="form-control" name="login-password" id="login-password" placeholder="Password">
                                                                 </div>
                                                                 <!-- .form-group end -->
                                                                 <div class="input-checkbox">
@@ -217,8 +110,9 @@
                                                             <div class="or-text">
                                                                 <span>or</span>
                                                             </div>
-                                                            {{UserDetails}}
-                                                            <div class="form-group">
+                                                            <p v-if="registerErrorMessage" style="color:red"> {{registerErrorMessage}}</p>
+                                                            <!-- {{UserDetails}} -->
+                                                            <!-- <div class="form-group">
                                                                 <select class="form-control" name="register-as" id="register-as" 
                                                                            v-model="UserDetails.RegisterAs" >
                                                                             <option value="">Register As</option>
@@ -226,31 +120,31 @@
                                                                             <option >Agent</option>
                                                                             <option >Agency</option>
                                                                 </select>
-                                                            </div>
+                                                            </div> -->
                                                             <!-- .form-group end -->
                                                             <div class="form-group">
                                                                 <input type="text" class="form-control" name="full-name" id="full-name" 
-                                                                placeholder="full name" v-model="UserDetails.FirstName">
+                                                                placeholder="full name" v-model="UserDetails.fullName">
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="email" class="form-control" name="register-email" id="register-email" 
-                                                                placeholder="Email Address" v-model="UserDetails.Email">
+                                                                placeholder="Email Address" v-model="UserDetails.email" >
                                                             </div>
                                                             <!-- .form-group end -->
                                                             <div class="form-group">
                                                                 <input type="password" class="form-control" name="register-password" id="register-password" 
-                                                                placeholder="Password" v-model="UserDetails.Password">
+                                                                placeholder="Password" v-model="UserDetails.password">
                                                             </div>
                                                             <!-- .form-group end -->
                                                             <div class="input-checkbox">
                                                                 <label class="label-checkbox">
                                                                 <span>I agree with all <a href="#">Terms & Conditions</a></span>
-                                                                <input type="checkbox">
+                                                                <input type="checkbox" v-model="isAgree">
                                                                 <span class="check-indicator"></span>
-                                                            </label>
+                                                            </label >
                                                             </div>
-                                                            <input type="submit" class="btn btn--primary btn--block" value="Register">
-                                                        </form>
+                                                            <input type="submit" :disabled="!isAgree"  class="btn btn--primary btn--block" value="Register" />
+                                                        </form >
                                                         <!-- form  end -->
                                                     </div>
 
@@ -265,9 +159,10 @@
                             </div>
                         </div>
                         <!-- Module Consultation  -->
-                        <div class="module module-property pull-left">
+                        <div v-if="isLoggedIn" class="module module-property pull-left">
                             <!-- <a href="add-property.html" > add property</a> -->
-                            <router-link to="/AddProperty" class="btn"><i class="fa fa-plus"></i>add property</router-link>
+                            <!-- <router-link  to="/AddProperty" class="btn"><i class="fa fa-plus"></i>add property</router-link> -->
+                            <router-link  to="#" class="btn"><i class="fa fa-plus"></i>Join as Agent</router-link>
                         </div>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -277,25 +172,75 @@
 
         </header>
 </template>
-
+<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
 <script>
+import AuthServices from '../Services/AuthServices';
 
 export default {
     data() {
         return {
             UserDetails : {
-                RegisterAs : '',
-                FirstName : '',
-                Email : '',
-                Password : '',
-            }
+                fullName : "" , 
+                email : "" ,
+                password : "",
+              },
+              isAgree : false ,
+              registerErrorMessage : "" ,
+              loginErrorMessage : '',
+              isLoggedIn : JSON.parse(localStorage.getItem('isLoggedIn')),
+              loginDetails : {
+                  email :'',
+                  password : ''
+              }
         }
+    },
+    watch: {
+        isLoggedIn(val){
+            console.log('hello');
+            this.isLoggedIn = val;
+        }
+    },
+    computed : {
+        // isLogin(){
+        //     console.log(localStorage.getItem('isLogin'));
+        //     return JSON.parse(localStorage.getItem('isLogin'));
+        // }
     },
     methods :{
         handleRegister(){
-            console.log(this.UserDetails);
+                AuthServices.register(this.UserDetails).then(res =>{
+                    $('#signupModule').modal("hide");
+                    console.log(res);
+                }).catch(err => {
+                    this.registerErrorMessage = 'User Already exists!'
+                })
+            },
+
+        handleLogin(){
+                AuthServices.loing(this.loginDetails).then(res =>{
+                    $('#signupModule').modal("hide");
+                    localStorage.setItem('isLoggedIn' , true);
+                    this.isLoggedIn = true
+                    localStorage.setItem('token', res.data.jwtoken);
+                }).catch(err =>{
+                    console.log(err);
+                    this.loginErrorMessage = "Email or password does not match!"
+                })
+            },
+        handleLogout(){
+            console.log(typeof(JSON.parse(localStorage.getItem('isLoggedIn'))));
+            localStorage.setItem('isLoggedIn' , false);
+            this.isLoggedIn = false;
+        },
+            handleRegisterError(){
+                this.registerErrorMessage = '';
+            },
+            handleLoginError(){
+                this.loginErrorMessage = ''
+            }
+
+
         }
-    }
 }
 </script>
     

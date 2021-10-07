@@ -72,7 +72,7 @@ export default {
     },
     computed : {
         from() {
-            // console.log(this.$route.params);
+            // console.log(this.$route.params); // find by AgencyId or AgentId and Send Mail
             return "hello"
         }
     },

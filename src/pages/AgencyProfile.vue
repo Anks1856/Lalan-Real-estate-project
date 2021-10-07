@@ -235,10 +235,7 @@ export default {
                 userId : 1542,
                 userProfilePic : "/assets/images/agency/2.jpg" , 
                 isAgent : true , //image object or name
-                // agentId : 125125,
-
                 isAgency : true ,
-                // agencyId : 124578 ,
                 isUnderAgency : false, // if not agency then check
                 personalDetails : {
                     firstName : "", // agent name ...
@@ -258,9 +255,9 @@ export default {
                     license : "RE511U0" ,
                     taxNumber : "802442" ,
                     language : ["English", "Arabic"],
+                    agents : [150150 , 120120] , 
                 },
-                hasAgents : [150150 , 120120] , 
-                properties : [12003] , // combined properties of all agents
+                    // properties : [12003] , // agent's property  
                 },
             properties : [ // data from props  call 
                 {
