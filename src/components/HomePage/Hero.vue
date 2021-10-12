@@ -7,7 +7,8 @@
                             <div class="text-center">
                                 <h1>Find Your Favorite Property</h1>
                             </div>
-                            {{searchObj}}
+                            {{searchObj}} 
+                            <p></p>
                             <form class="mb-0" @submit.prevent="handleSearch">
                                 <div class="form-box search-properties">
                                     <div class="row">
@@ -158,7 +159,7 @@ export default {
                 beds : '',
                 baths : '',
                 priceRange : '',
-            }
+            },
         }
     },
     methods : {
@@ -166,7 +167,21 @@ export default {
             console.log(this.searchObj);
             // let urlObj = new ({name:"ankur"})
             // console.log(urlObj);
-            this.$router.replace({path:'/properties' , query : {...this.searchObj}})
+            const queryObject = {};
+            for(const [key, value] of Object.entries(this.searchObj)) {
+                if(key == 'priceRange'){
+                    if(value != '$0 - $1000'){
+                        queryObject[key] = value
+                    }
+                }
+                else{
+                    if(value){
+                        queryObject[key] = value
+                    }
+                }
+            }
+
+            this.$router.replace({path:'/properties' , query : {...queryObject} })
         }
     }
 

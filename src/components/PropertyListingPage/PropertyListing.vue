@@ -33,7 +33,7 @@
                                 <!-- .property item end -->
 
                                 <!-- .property-item #2 -->
-                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="property-item">
                                         <div class="property--img">
                                             <a href="property-single-gallery.html">
@@ -56,7 +56,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- .property item end -->
 
                                 <!-- .property-item #3 -->

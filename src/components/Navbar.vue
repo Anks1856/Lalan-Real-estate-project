@@ -48,16 +48,16 @@
                                     <li><router-link to="/UserProfile">user profile</router-link></li>
                                     <li><router-link to="/SocialProfile">social profile</router-link></li>
                                     <li><router-link to="/FavouriteProperties">favourite properties</router-link></li>
-                                    <li><router-link to="/MyProperties">my properties</router-link></li>
-                                    <li><router-link to="/AddProperty">add property</router-link></li>
+                                    <li v-if="isAgent"><router-link to="/MyProperties">my properties</router-link></li>
+                                    <li v-if="isAgent"><router-link to="/AddProperty">add property</router-link></li>
                                 </ul>
                             </li>
 
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
-                            <a class="btn-popup" v-if="!isLoggedIn" data-toggle="modal" data-target="#signupModule">Login</a>
-                            <a class="btn-popup"  v-else @click="handleLogout">logout</a>
+                            <a class="btn-popup" v-show="!isLoggedIn" data-toggle="modal" data-target="#signupModule">Login</a>
+                            <a class="btn-popup"  v-if="isLoggedIn" @click="handleLogout">logout</a>
                             <div class="modal register-login-modal fade" tabindex="-1" role="dialog" id="signupModule">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
@@ -83,12 +83,12 @@
                                                                 </div>
                                                                     <p v-if="loginErrorMessage" style="color:red"> {{loginErrorMessage}}</p>
                                                                 <div class="form-group">
-                                                                    <input type="email" v-model="loginDetails.email" class="form-control" name="login-email" id="login-email" placeholder="Email Address">
+                                                                    <input type="email" @focus="handleLoginError" v-model="loginDetails.email" class="form-control" name="login-email" id="login-email" placeholder="Email Address" required>
                                                                 </div>
                                                                 <!-- .form-group end -->
                                                                 <div class="form-group">
-                                                                    <input type="password" v-model="loginDetails.password" class="form-control" name="login-password" id="login-password" placeholder="Password">
-                                                                </div>
+                                                                    <input type="password" v-model="loginDetails.password" class="form-control" name="login-password" id="login-password" placeholder="Password" required>
+                                                                </div>  
                                                                 <!-- .form-group end -->
                                                                 <div class="input-checkbox">
                                                                     <label class="label-checkbox">
@@ -127,7 +127,7 @@
                                                                 placeholder="full name" v-model="UserDetails.fullName">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="email" class="form-control" name="register-email" id="register-email" 
+                                                                <input type="email" @focus="handleRegisterError" class="form-control" name="register-email" id="register-email" 
                                                                 placeholder="Email Address" v-model="UserDetails.email" >
                                                             </div>
                                                             <!-- .form-group end -->
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                         <!-- Module Consultation  -->
-                        <div v-if="isLoggedIn" class="module module-property pull-left">
+                        <div  class="module module-property pull-left">
                             <!-- <a href="add-property.html" > add property</a> -->
                             <!-- <router-link  to="/AddProperty" class="btn"><i class="fa fa-plus"></i>add property</router-link> -->
                             <router-link  to="#" class="btn"><i class="fa fa-plus"></i>Join as Agent</router-link>
@@ -182,12 +182,13 @@ export default {
             UserDetails : {
                 fullName : "" , 
                 email : "" ,
-                password : "",
+                password : "" ,
               },
               isAgree : false ,
               registerErrorMessage : "" ,
-              loginErrorMessage : '',
+              loginErrorMessage : '' ,
               isLoggedIn : JSON.parse(localStorage.getItem('isLoggedIn')),
+              isAgent : false ,
               loginDetails : {
                   email :'',
                   password : ''
@@ -196,7 +197,6 @@ export default {
     },
     watch: {
         isLoggedIn(val){
-            console.log('hello');
             this.isLoggedIn = val;
         }
     },
@@ -210,9 +210,11 @@ export default {
         handleRegister(){
                 AuthServices.register(this.UserDetails).then(res =>{
                     $('#signupModule').modal("hide");
-                    console.log(res);
+                    this.isLoggedIn = true
                 }).catch(err => {
-                    this.registerErrorMessage = 'User Already exists!'
+                    if(err.response.status == 403){
+                        this.registerErrorMessage = 'Email Already registered!'
+                    }
                 })
             },
 
@@ -223,7 +225,7 @@ export default {
                     this.isLoggedIn = true
                     localStorage.setItem('token', res.data.jwtoken);
                 }).catch(err =>{
-                    console.log(err);
+                    console.log(err.response.status);
                     this.loginErrorMessage = "Email or password does not match!"
                 })
             },

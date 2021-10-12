@@ -1,8 +1,8 @@
 <template>
          <div  class="property-item">
                 <div class="property--img">
-                    <router-link :to=" '/property/'+ property.porpertyID " >
-                    <img :src="property.media.photos" alt="property image" class="img-responsive">
+                    <router-link :to=" '/property/'+ property._id " >
+                    <img :src="property.media.photos[0]" alt="property image" class="img-responsive">
                     </router-link>
                     <span class="property--status">For {{property.description.status}}</span>
                 </div>
